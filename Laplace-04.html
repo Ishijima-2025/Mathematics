@@ -1,0 +1,75 @@
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ['\\(','\\)'] ],
+    processEscapes: true
+  },
+  TeX: {
+    extensions: ["mhchem.js"]
+  },
+  CommonHTML: {
+    matchFontHeight: false
+  }
+});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Yuhai Tu</title>
+<link href="090413.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+</head>
+
+
+	
+
+
+
+<link href="../../../../Documents/HomePage/160324.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+<title>Laplace</title>
+</head>
+
+<body>
+<p class="Large-Bold-RED">ラプラス変換_微分</p>
+<p>&nbsp;</p>
+<p class="Large-Red">・ 一階微分</p>
+<p>&nbsp;</p>
+<p>\( \Large\mathfrak{ L} \{  \displaystyle \frac{d \ f(t)}{dt} \} =\displaystyle \int_{0}^{ \infty }  \displaystyle \frac{d \ f(t)}{dt}  \cdot \ e^{-st} dt  \)</p>
+<p>部分積分から，</p>
+<p>\( \Large      (f \ g )' = f' \ g + f \ g' \)</p>
+<p>\( \Large      f' \ g = (f \ g )' - f \ g' \)</p>
+<p>\( \Large      \int f' \ g = \int (f \ g )' - \int f \ g' \)</p>
+<p>\( \Large      \int f' \ g = [f \ g ] - \int f \ g' \)</p>
+<p>\( \Large       f' =   \displaystyle \frac{d \ f(t)}{t} f =  f(t) \)</p>
+<p>\( \Large       g =e^{-st} \ g' = -s \ e^{-st} \)</p>
+<p>\( \Large \displaystyle \int_{0}^{ \infty }  \displaystyle \frac{d \ f(t)}{t}  \cdot \ e^{-st} dt  <br>
+　= \left[ f(t) \cdot e^{-st}  \right]_{0}^{\infty} - \int_{0}^{ \infty } \left( - s  \ e^{-st} \right) \cdot f(t) \ dt \)</p>
+<p>\( \Large \displaystyle　=  - f(0) + s \int_{0}^{ \infty }  e^{-st}  \cdot f(t) \ dt \)</p>
+<p>\( \Large \displaystyle　=  s \ F(s) - f(0)  \)</p>
+<p>&nbsp;</p>
+<p>\( \Large\color{red}{\mathfrak{ L} \{  \displaystyle \frac{d \ f(t)}{t} \} =  s \ F(s) - f(0)}  \)</p>
+<p>&nbsp;</p>
+<p class="Large-Red">・ 二階微分</p>
+<p>&nbsp;</p>
+<p>\( \Large\mathfrak{ L} \{  \displaystyle \frac{d^2 \ f(t)}{dt^2} \} =  \mathfrak{ L} \{  \displaystyle \frac{d}{dt} \frac{d \ f(t)}{dt} \}\)</p>
+<p>\( \Large =  s \ \mathfrak{ L} \{  \displaystyle  \frac{d \ f(t)}{dt}  \} - \frac{d \ f(0)}{dt}\)</p>
+<p>\( \Large =  s \ \left\{s \ F(s) - f(0) \right\}- \displaystyle　 \frac{d \ f(0)}{dt}\)</p>
+<p>\( \Large \displaystyle =  s^2  \ F(s) - s \ f(0) -f'(0)\)</p>
+<p>&nbsp;</p>
+<p>次に，応用として<span class="Large-Blue">化学反応</span>について考えていきます．</p>
+<p>&nbsp;</p>
+<p><span class="style7"><a href="Laplace-03.html"><img src="L-arrow.png" alt="l" width="57" height="34" /></a><a href="kenkyu-2.html"><img src="TOP.png" alt="t" width="57" height="34" /></a></span><a href="Laplace-05.html"><img src="R-arrow.png" alt="r" width="57" height="34" /></a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

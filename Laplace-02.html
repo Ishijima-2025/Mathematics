@@ -1,0 +1,82 @@
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ['\\(','\\)'] ],
+    processEscapes: true
+  },
+  TeX: {
+    extensions: ["mhchem.js"]
+  },
+  CommonHTML: {
+    matchFontHeight: false
+  }
+});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Yuhai Tu</title>
+<link href="090413.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+</head>
+
+
+	
+
+
+
+<link href="../../../../Documents/HomePage/160324.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+<title>Laplace</title>
+</head>
+
+<body>
+<p class="Large-Bold-RED">ラプラス変換_指数</p>
+<p>&nbsp;</p>
+<p class="Large-Red">・指数</p>
+<p><img src="Laplace-exp.png" width="665" height="441
+	" alt=""/></p>
+<p>\( \Large      f(t) = e^{-at} \)</p>
+<p>\( \Large\mathfrak{ L} \{ f(t) \} = \mathfrak{ L} \{ e^{-at} \}\)</p>
+<p>\( \Large=\displaystyle \int_{0}^{ \infty } e^{-at} \ e^{-st} dt  \)</p>
+<p>\( \Large=\displaystyle \int_{0}^{ \infty }  \ e^{-(s+a)t} dt  \)</p>
+<p>\( \Large= K \ \left[ - \displaystyle \frac{1}{s+a}  e^{-(s+a)t} \right]_{0}^{\infty}  \)</p>
+<p>\( \Large=  \displaystyle \frac{1}{s+a}    \)</p>
+<p>\( \Large  \color{red}{\mathfrak{ L} \{ e^{-at} \} = \displaystyle \frac{1}{s+a}}    \)</p>
+<p>&nbsp;</p>
+<p class="Large-Red">・指数×t</p>
+<p><img src="Laplace-exp_t.png" width="665" height="441" alt=""/></p>
+<p>\( \Large      f(t) = t \ e^{-at} \)</p>
+<p>\( \Large\mathfrak{ L} \{ f(t) \} = \mathfrak{ L} \{ t \ e^{-at} \}\)</p>
+<p>\( \Large=\displaystyle \int_{0}^{ \infty } t \ e^{-at} \ e^{-st} dt  \)</p>
+<p>\( \Large=\displaystyle \int_{0}^{ \infty }  \ t \ e^{-(s+a)t} dt  \)</p>
+<p>部分積分から，</p>
+<p>\( \Large      (f \ g )' = f' \ g + f \ g' \)</p>
+<p>\( \Large      f' \ g = (f \ g )' - f \ g' \)</p>
+<p>\( \Large      \int f' \ g = \int (f \ g )' - \int f \ g' \)</p>
+<p>\( \Large      \int f' \ g = [f \ g ] - \int f \ g' \)</p>
+<p>\( \Large       f' = e^{-(s+a) t} \rightarrow f = - \frac{1}{s+a} e^{-(s+a) t} \)</p>
+<p>\( \Large       g = t \rightarrow g' = 1 \)</p>
+<p>\( \Large \displaystyle \int_{0}^{ \infty }  \ t \ e^{-(s+a)t} dt  　<br>
+= \left[ - \frac{1}{a+s} e^{-(s+a)t} \cdot  t \right]_{0}^{\infty} - \int_{0}^{ \infty } \left( - \frac{1}{s+a}  \ e^{-(s+a)t} \right)  \ dt \)</p>
+<p>\( \Large \displaystyle = 0 +\frac{1}{s+a} \int_{0}^{ \infty }   e^{-(s+a)t}   \ dt \)</p>
+<p>\( \Large \displaystyle = \frac{1}{s+a} \left[   \frac{1}{s+a} e^{-(s+a)t}   \right]_{0}^{\infty} \)</p>
+<p>\( \Large \displaystyle = \frac{1}{(s+a)^2}  \)</p>
+<p>\( \Large \displaystyle \color{red}{\mathfrak{ L} \{ t \ e^{-at} \} = \frac{1}{(s+a)^2}}  \)</p>
+<p>&nbsp;</p>
+<p>次は<span class="Large-Blue">三角関数</span>です．</p>
+<p>&nbsp;</p>
+<p><span class="style7"><a href="Laplace-01.html"><img src="L-arrow.png" alt="l" width="57" height="34" /></a><a href="kenkyu-2.html"><img src="TOP.png" alt="t" width="57" height="34" /></a></span><a href="Laplace-03.html"><img src="R-arrow.png" alt="r" width="57" height="34" /></a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

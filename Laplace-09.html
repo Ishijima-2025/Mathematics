@@ -1,0 +1,135 @@
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ['\\(','\\)'] ],
+    processEscapes: true
+  },
+  TeX: {
+    extensions: ["mhchem.js"]
+  },
+  CommonHTML: {
+    matchFontHeight: false
+  }
+});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Yuhai Tu</title>
+<link href="090413.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+</head>
+
+
+	
+
+
+
+<link href="160324.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+<meta charset="UTF-8">
+<title>Laplace</title>
+</head>
+
+<body>
+<p class="X-Large-Bold-RED">ラプラス変換_運動方程式 - k&gt;ω</p>
+<p>&nbsp;</p>
+<p class="Large-Blue">・ k &gt; ω</p>
+<p>平方根の中の値が実数になるので，そのまま計算して，</p>
+<p>\( \Large           \displaystyle      A \equiv  -(- k - 
+\sqrt{k^2 - \omega^2}) =  k + 
+\sqrt{k^2 - \omega^2}\)</p>
+<p>\( \Large           \displaystyle      B \equiv  -(-k + 
+\sqrt{k^2 - \omega^2}) = k - 
+\sqrt{k^2 - \omega^2}\)</p>
+<p>とすると，</p>
+<p>\( \Large           \displaystyle      F(s) =\frac{ s \ f(0)  + f'(0) + 2k   \ f(0)}{( s+A)(s +B) }  \)</p>
+<p>右辺を部分分数分解を行うと，</p>
+<p>\( \Large           \displaystyle      F(s) =\left\{ s \ f(0)  + f'(0) + 2k   \ f(0) \right\}\frac{ 1}{( s+A)(s +B) }  \)  </p>
+<p>\( \Large           \displaystyle       \hspace{30 pt} =<br>
+  \frac{ \alpha}{ s+A} <br>
++ \frac{\beta}{s+B }  \) </p>
+<p>&nbsp;</p>
+<p>\( \Large           \displaystyle       <br>
+  \frac{ \alpha}{ s+A} + \frac{\beta}{s+B }<br>
+=
+\frac{ \alpha( s+B) + \beta ( s+A) 
+}{( s+A)(s +B) }  \) </p>
+<p>分子を整理すると，</p>
+<p>\( \Large           \displaystyle  \alpha( s+B) + \beta ( s+A) 
+  <br>
+  =
+( \alpha + \beta)s + \alpha \ B + \beta \ A\)</p>
+<p>sの項では</p>
+<p>\( \Large           \displaystyle \alpha + \beta= f(0) \)</p>
+<p>ｓ以外の項では，</p>
+<p>\( \Large           \displaystyle  \alpha \ B + \beta \ A<br>
+  = \alpha 
+\left\{ k - 
+\sqrt{k^2 - \omega^2} \right\}+ \beta \left\{  k + 
+\sqrt{k^2 - \omega^2} \right\} \)</p>
+<p>\( \Large           \displaystyle   
+= ( \alpha + \beta) k - (\alpha - \beta) \sqrt{k^2 - \omega^2} <br>
+=f'(0) + 2k   \ f(0)
+\)</p>
+<p>\( \Large           \displaystyle   
+  k \ f(0) - (\alpha - \beta) \sqrt{k^2 - \omega^2} <br>
+=f'(0) + 2k   \ f(0)
+\)</p>
+<p>\( \Large           \displaystyle   
+ (\alpha - \beta) \sqrt{k^2 - \omega^2} <br>
+= - k \ f(0)  -f'(0) - 2k   \ f(0)
+  \)</p>
+<p>\( \Large           \displaystyle   
+  \alpha - \beta  <br>
+=-\frac{ f'(0) + k   \ f(0)}{\sqrt{k^2 - \omega^2}}
+\)</p>
+<p>&nbsp;</p>
+<p>\( \Large           \displaystyle \alpha + \beta= f(0) \)</p>
+<p>との関係から，</p>
+<p>\( \Large           \displaystyle   
+\alpha = \frac{1}{2} \left[ f(0)-\frac{ f'(0) + k   \ f(0)}{\sqrt{k^2 - \omega^2}} \right]\)</p>
+<p>\( \Large           \displaystyle   
+= \frac{ f(0) \sqrt{k^2 - \omega^2} - f'(0) - k   \ f(0)}{2 \sqrt{k^2 - \omega^2}} \)</p>
+<p>\( \Large           \displaystyle   
+= -\frac{  f'(0) +( k - \sqrt{k^2 - \omega^2} )   \ f(0)}{2 \sqrt{k^2 - \omega^2}} \)</p>
+<p>&nbsp;</p>
+<p>\( \Large           \displaystyle   \beta= f(0) - \alpha <br>
+= f(0) - \left[ -\frac{  f'(0) +( k - \sqrt{k^2 - \omega^2} )   \ f(0)}{2 \sqrt{k^2 - \omega^2}} \right] \)</p>
+<p>\( \Large           \displaystyle   =\frac{2 f(0)  \sqrt{k^2 - \omega^2} + f'(0) +( k - \sqrt{k^2 - \omega^2} )   \ f(0)}{2 \sqrt{k^2 - \omega^2}}  \)</p>
+<p>\( \Large           \displaystyle   =\frac{ f'(0) +( k + \sqrt{k^2 - \omega^2} )   \ f(0)}{2 \sqrt{k^2 - \omega^2}}  \)</p>
+<p>&nbsp;</p>
+<p>したがって，逆ラプラス変換を行うと，</p>
+<p>\( \Large           \displaystyle      F(s)  =\frac{ \alpha}{ s+A} + \frac{\beta}{s+B }  \) </p>
+<p>\( \Large           \displaystyle      x(t)  = \alpha \ e^{-At} + \beta \ e^{-Bt}  \) </p>
+<p>ここで，</p>
+<p>\( \Large           \displaystyle   
+\alpha = -\frac{  f'(0) +( k - \sqrt{k^2 - \omega^2} )   \ f(0)}{2 \sqrt{k^2 - \omega^2}} \)</p>
+<p>\( \Large           \displaystyle   \beta =\frac{ f'(0) +( k + \sqrt{k^2 - \omega^2} )   \ f(0)}{2 \sqrt{k^2 - \omega^2}}  \)</p>
+<p>\( \Large           \displaystyle      A  =  k + 
+\sqrt{k^2 - \omega^2}\)</p>
+<p>\( \Large           \displaystyle      B = k - 
+  \sqrt{k^2 - \omega^2}\)</p>
+<p>となります．つまり，2つの指数関数の和となります．</p>
+<p><img src="Laplace-motion-01.png" width="711" height="463" alt=""/></p>
+<p>単純な指数関数ではフィットできない曲線になるようです．</p>
+<p>これを，<a href="https://www.jsme.or.jp/jsme-medwiki/doku.php?id=03:1008301" target="_blank">超過減衰</a>，と呼ぶようです．</p>
+<p>x(0), x'(0)，を色々変えてみると，</p>
+<p><img src="Laplace-motion-02.png" width="712" height="565" alt=""/></p>
+<p>このように，オーバーシュートする場合があることがわかります．</p>
+<p>&nbsp;</p>
+<p>次は， <span class="Large-Blue">k=ω</span>，の場合です．</p>
+<p>&nbsp;</p>
+<p><span class="style7"><a href="Laplace-08.html"><img src="L-arrow.png" alt="l" width="57" height="34" /></a><a href="kenkyu-2.html"><img src="TOP.png" alt="t" width="57" height="34" /></a></span><a href="Laplace-10.html"><img src="R-arrow.png" alt="r" width="57" height="34" /></a></p>
+<p>&nbsp;</p>
+</body>
+</html>

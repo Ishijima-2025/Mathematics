@@ -1,0 +1,92 @@
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ['\\(','\\)'] ],
+    processEscapes: true
+  },
+  TeX: {
+    extensions: ["mhchem.js"]
+  },
+  CommonHTML: {
+    matchFontHeight: false
+  }
+});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Yuhai Tu</title>
+<link href="090413.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+</head>
+
+<body>
+<p class="Large-Bold-RED">ラプラス変換_運動方程式 - k&lt;ω</p>
+<p>&nbsp;</p>
+<p class="Large-Blue">・ k &lt; ω</p>
+<p>\( \Large           \displaystyle      F(s) =\frac{ s \ f(0)  + f'(0) + 2k   \ f(0)}{s^2  + 2ks+ \omega^2 }  \)</p>
+<p>分母に着目すると，分母＝０の場合の解は</p>
+<p>\( \Large           \displaystyle      s^2  + 2ks+ \omega^2 = 0 \)</p>
+<p>\( \Large           \displaystyle      s = \frac{-2k \pm \sqrt{4k^2 -4 \omega^2 }}{2} <br>
+  = - k \pm 
+  \sqrt{k^2 - \omega^2} \)</p>
+<p>ですが，k&lt;ω，の場合，平方根内がマイナスとなるので，虚数となります．</p>
+<p>その解は，</p>
+<p>\( \Large           \displaystyle      s = - k \pm 
+i \ \sqrt{  \omega^2 - k^2} \)</p>
+<p>となるので，</p>
+<p>\( \Large           \displaystyle      F(s) =\frac{ s \ f(0)  + f'(0) + 2k   \ f(0)}{(s+  k + 
+i \ \sqrt{  \omega^2 - k^2})(s+ k - 
+i \ \sqrt{  \omega^2 - k^2}) }  \)</p>
+<p>\( \Large           \displaystyle       =\frac{ s \ f(0)  + f'(0) + 2k   \ f(0)}{(s+  k)^2 + 
+( \sqrt{\omega^2 - k^2})^2}  \)</p>
+<p>\( \Large           \displaystyle       =\frac{ (s+k) \ f(0)  + f'(0) + k   \ f(0)}{(s+  k)^2 + 
+ 
+( \sqrt{\omega^2 - k^2})^2}  \)</p>
+<p>\( \Large           \displaystyle       =\frac{ (s+k) \ f(0)  }{(s+  k)^2 + 
+ 
+( \sqrt{\omega^2 - k^2})^2}  <br>
++ 
+\frac{  f'(0) + k   \ f(0)}{(s+  k)^2 + 
+ 
+( \sqrt{\omega^2 - k^2})^2}  \)</p>
+<p>\( \Large           \displaystyle       =\frac{ (s+k) \ f(0)  }{(s+  k)^2 + 
+ 
+( \sqrt{\omega^2 - k^2})^2} <br>
++ 
+\frac{  f'(0) + k   \ f(0)}{ \sqrt{\omega^2 - k^2}}<br>
+\frac{  \sqrt{\omega^2 - k^2}}{(s+  k)^2 + 
+ 
+( \sqrt{\omega^2 - k^2})^2} \)</p>
+<p>&nbsp;</p>
+<p>\( \Large \color{red}{\mathfrak{ L} \{  e^{-at} \sin \ \omega t  \}<br>
+　=  \displaystyle \frac{\omega }{(s+a)^2+ \omega^2}} \)</p>
+<p>\( \Large \color{red}{\mathfrak{ L} \{  e^{-at} \cos \ \omega t  \}<br>
+　=  \displaystyle \frac{s+a }{(s+a)^2+ \omega^2}} \)</p>
+<p>を使って，逆ラプラス変換を行うと，</p>
+<p>\( \Large           \displaystyle      F(s) = f(0) \ e^{-kt} \ cos \sqrt{  \omega^2 - k^2} t<br>
+  + \frac{  f'(0) + k   \ f(0)}{ \sqrt{\omega^2 - k^2}}  \ e^{-kt} \ sin 
+\sqrt{  \omega^2 - k^2} t  \)</p>
+<p>\( \Large           \displaystyle       = \left[ f(0)  \ cos \sqrt{  \omega^2 - k^2} t<br>
++ \frac{  f'(0) + k   \ f(0)}{ \sqrt{\omega^2 - k^2}}   \ sin 
+\sqrt{  \omega^2 - k^2} t \right] \ e^{-kt}\)</p>
+<p>となり，三角関数と指数関数との積なので，振動しながら減衰する運動となります．</p>
+<p>図示すると，</p>
+<p><img src="Laplace-motion-04.png" width="702" height="465" alt=""/></p>
+<p>&nbsp;</p>
+<p>のように，特に初期速度をプラスにするのかマイナスにするのかによってによって振る舞いが変わりますが，振動しながら振動することに変わりありません．</p>
+<p>これを，<a href="https://www.jsme.or.jp/jsme-medwiki/doku.php?id=13:1003728" target="_blank">減衰減衰</a>，と呼ぶようです．</p>
+<p>粘性抵抗係数が０の場合は減衰せず，単振動となります</p>
+<p><img src="Laplace-motion-05.png" width="708" height="467" alt=""/></p>
+<p>&nbsp;</p>
+<p><span class="style7"><a href="Laplace-10.html"><img src="L-arrow.png" alt="l" width="57" height="34" /></a><a href="kenkyu-2.html"><img src="TOP.png" alt="t" width="57" height="34" /></a></span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

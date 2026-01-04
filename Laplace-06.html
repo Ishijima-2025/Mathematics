@@ -1,0 +1,98 @@
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ['\\(','\\)'] ],
+    processEscapes: true
+  },
+  TeX: {
+    extensions: ["mhchem.js"]
+  },
+  CommonHTML: {
+    matchFontHeight: false
+  }
+});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Yuhai Tu</title>
+<link href="090413.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+</head>
+
+	
+
+
+
+<link href="160324.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+<meta charset="UTF-8">
+<title>Laplace</title>
+</head>
+
+<body>
+<p class="X-Large-Bold-RED">ラプラス変換_平衡反応</p>
+<p>&nbsp;	</p>
+<p class="Large-Bold-Red">平衡反応</p>
+<p>平衡反応において，</p>
+<p>\( \Large     \hspace{15 pt} \ce{A  &lt;=&gt;C[ k_{AB} ][k_{BA}]B} \)</p>
+<p>となります．</p>
+<p>Aの時間変化は，</p>
+<p>\( \Large     \displaystyle A'[t] = -k_{AB} \cdot A[t] + k_{BA} \cdot B[t]\)</p>
+<p>AとBの和は保存しますので，</p>
+<p>\( \Large     \displaystyle A[t] +  B[t] =1\)</p>
+<p>単純に総和を１とします．すると，</p>
+<p>\( \Large     \displaystyle A'[t] = -k_{AB} \cdot A[t] + k_{BA} \cdot (1-A[t])\)</p>
+<p>\( \Large          \hspace{30 pt} = -(k_{AB} + k_{BA}) \cdot A[t] + k_{BA} \)</p>
+<p>となります．ラプラス変換を行うと，微分は，</p>
+<p>\( \Large\color{red}{\mathfrak{ L} \{  \displaystyle \frac{d \ f(t)}{t} \} =  s \ F(s) - f(0)}  \)</p>
+<p>となるので，</p>
+<p>\( \Large     \displaystyle s \ F(s) - 1 =  -(k_{AB} + k_{BA})  \ F(s) + \frac{ k_{BA}}{s} \)</p>
+<p>ここで，単純化するために，</p>
+<p>\( \Large     \displaystyle k \equiv k_{AB} + k_{BA} \)</p>
+<p>とすると，</p>
+<p>\( \Large     \displaystyle s \ F(s) - 1 =  -k  \ F(s) + \frac{ k_{BA}}{s} \)</p>
+<p>\( \Large     \displaystyle (s+k) \ F(s) = 1  + \frac{ k_{BA}}{s} \)</p>
+<p>\( \Large     \displaystyle  F(s) = \frac{1}{s+k}  + \frac{ k_{BA}}{s(s+k)} \)</p>
+<p>右辺第二項を部分分数分解を行うと，</p>
+<p>\( \Large     \displaystyle   \frac{ k_{BA}}{s(s+k)} = k_{BA} \left\{ \frac{ \alpha}{s} + \frac{ \beta}{s+k} \right\} <br>
+  =
+k_{BA} \frac{ \alpha (s+k) + \beta \ s}{s(s+k)}<br>
+=
+k_{BA} \frac{ (\alpha + \beta)s + \alpha \ k}{s(s+k)}\)</p>
+<p>したがって，</p>
+<p>\( \Large     \displaystyle   \alpha = \frac{1}{k} \ \beta = -  \frac{1}{k} \)</p>
+<p>となるので，</p>
+<p>\( \Large     \displaystyle   \frac{ k_{BA}}{s(s+k)} 
+= \frac{k_{BA}}{k} \left\{ \frac{ 1}{s} - \frac{ 1}{s+k} \right\} \)</p>
+<p>まとめると，</p>
+<p>\( \Large     \displaystyle  F(s) = \frac{1}{s+k}  + \frac{k_{BA}}{k}  \frac{ 1}{s} - \frac{k_{BA}}{k} \frac{ 1}{s+k}  \)</p>
+<p>&nbsp;</p>
+<p>\( \Large \color{red}{\mathfrak{ L} \{ K \} =  \displaystyle \frac{K}{s}}\)</p>
+<p>\( \Large  \color{red}{\mathfrak{ L} \{ e^{-at} \} = \displaystyle \frac{1}{s+a}}    \)</p>
+<p>から，</p>
+<p>\( \Large     \displaystyle  A[t] =  e^{-kt}  + \frac{k_{BA}}{k} - \frac{k_{BA}}{k} e^{-k  t}\)</p>
+<p>\( \Large          \hspace{30 pt} \displaystyle   =  (1   - \frac{k_{BA}}{k}) e^{-k  t}+ \frac{k_{BA}}{k}\)</p>
+<p>\( \Large          \hspace{30 pt} \displaystyle   =  (\frac{ k_{AB} + k_{BA}}{ k_{AB} + k_{BA}}   - \frac{k_{BA}}{ k_{AB} + k_{BA}}) e^{-k  t}+ \frac{k_{BA}}{k}\)</p>
+<p>\( \Large          \hspace{30 pt} \displaystyle   =  \frac{ k_{AB} }{ k_{AB} + k_{BA}}    e^{-k  t}+ \frac{k_{BA}}{k_{AB} + k_{BA}}\)</p>
+<p>となり，</p>
+<p>t=0</p>
+<p>\( \Large          \displaystyle   A[0] =  \frac{ k_{AB} }{ k_{AB} + k_{BA}}    e^{-k  \ 0}+ \frac{k_{BA}}{k_{AB} + k_{BA}} =1 \)</p>
+<p>t=∞</p>
+<p>\( \Large          \displaystyle   A[0] =  \frac{ k_{AB} }{ k_{AB} + k_{BA}}    e^{-k  \ \infty}+ \frac{k_{BA}}{k_{AB} + k_{BA}} =\frac{k_{BA}}{k_{AB} + k_{BA}} \)</p>
+<p>Aは指数関数的に減少していき，ある一定に落ち着くことがわかります．</p>
+<p>次は，<span class="Large-Blue">逐次反応</span>です．</p>
+<p>&nbsp;</p>
+<p><span class="style7"><a href="Laplace-05.html"><img src="L-arrow.png" alt="l" width="57" height="34" /></a><a href="kenkyu-2.html"><img src="TOP.png" alt="t" width="57" height="34" /></a></span><a href="Laplace-07.html"><img src="R-arrow.png" alt="r" width="57" height="34" /></a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

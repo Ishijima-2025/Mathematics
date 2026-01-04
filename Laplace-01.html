@@ -1,0 +1,90 @@
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ['\\(','\\)'] ],
+    processEscapes: true
+  },
+  TeX: {
+    extensions: ["mhchem.js"]
+  },
+  CommonHTML: {
+    matchFontHeight: false
+  }
+});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Yuhai Tu</title>
+<link href="090413.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+</head>
+
+
+	
+
+
+
+<link href="../../../../Documents/HomePage/160324.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+<title>Laplace</title>
+</head>
+
+<body>
+<p class="Large-Bold-RED">ラプラス変換</p>
+<p>&nbsp;</p>
+<p>ラブラス変換，じつは．．．．いままで避けて通ってきた分野です．</p>
+<p>いろんな公式がいっぱいあるし，何に使っていけばいいか，どういう意味があるかがわからなかったからです．</p>
+<p>しかし，改めて見直してみると，いろいろ面白く，結構便利ではないかと感じ，勉強し直しました．</p>
+<p><span class="Large-Blue">減衰する指数関数との積で積分</span>するので，<br>
+  　　<span class="Large-Bold-Blue">どんな（多分）関数でも時間無限大で０に収束する＝積分が成り立つ</span><br>
+という意味を持つのかな？と感じました．</p>
+<p>また，<span class="Blue">伝達関数</span>の計算によく使われますが，<br>
+  <span class="Blue">　単に微分方程式を解くのに役立つツール<br>
+  　　　　or<br>
+  　指数関数の積で積分する，ということに意味がある</span><br>
+のかはまだ私は理解していません．．．．．</p>
+<p>公式などについては，<a href="https://w3e.kanazawa-it.ac.jp/math/category/bibun/Laplace-henkan/henkan-tex.cgi?target=/math/category/bibun/Laplace-henkan/laplace_henkan_teigi.html" target="_blank">こちらのサイト</a>，を参考にしました，ありがとうございました</p>
+<p>まずは，公式，定数倍などから</p>
+<p class="Large-Bold-Red">・公式</p>
+<p>\( \Large     F(s) =\displaystyle \int_{0}^{ \infty } f(t) \ e^{-st} dt  =　\mathfrak{ L} \{ f(t) \}\)</p>
+<p>つまり，減衰する指数関数となるので，減衰曲線となります．</p>
+<p>&nbsp;</p>
+<p class="Large-Red">・線形性_定数倍</p>
+<p>\( \Large\mathfrak{ L} \{ a \ f(t) \} =\displaystyle \int_{0}^{ \infty } a \ f(t) \ e^{-st} dt<br>
+=a \displaystyle \int_{0}^{ \infty }   f(t) \ e^{-st} dt  
+\)</p>
+<p>\( \Large=a \ \mathfrak{ L} \{  \ f(t) \}
+  \)</p>
+<p>&nbsp;</p>
+<p class="Large-Red">・線形性_定数倍の和</p>
+<p>\( \Large\mathfrak{ L} \{ a \ f_1(t) + b \ f_2(t) \} =\displaystyle \int_{0}^{ \infty } \left[a \ f_1(t)+ b \ f_2(t) \right] \ e^{-st } dt\)</p>
+<p>\( \Large     =a \displaystyle \int_{0}^{ \infty }   f_1 (t) \ e^{-st} dt + b \displaystyle \int_{0}^{ \infty }   f_2 (t) \ e^{-st} dt
+\)</p>
+<p>\( \Large=a \ \mathfrak{ L} \{  \ f_1(t) \} + b \ \mathfrak{ L} \{  \ f_2(t) \}
+  \)</p>
+<p>&nbsp;</p>
+<p class="Large-Red">・定数</p>
+<p>\( \Large      f(t) = K \)</p>
+<p>\( \Large\mathfrak{ L} \{ f(t) \} = \mathfrak{ L} \{ K \}\)</p>
+<p>\( \Large=\displaystyle \int_{0}^{ \infty } K \ e^{-st} dt  \)</p>
+<p>\( \Large= K \ \left[ - \displaystyle \frac{1}{s}  e^{-st} \right]_{0}^{\infty}  \)</p>
+<p>\( \Large=  \displaystyle \frac{K}{s}    \)</p>
+<p>\( \Large \color{red}{\mathfrak{ L} \{ K \} =  \displaystyle \frac{K}{s}}\)</p>
+<p class="Large-Red">&nbsp;</p>
+<p>次ページに，<span class="Large-Blue">指数関数</span>のラブラス変換を考えていきます．</p>
+<p>&nbsp;</p>
+<p><span class="style7"><a href="kenkyu-2.html"><img src="TOP.png" alt="t" width="57" height="34" /></a></span><a href="Laplace-02.html"><img src="R-arrow.png" alt="r" width="57" height="34" /></a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

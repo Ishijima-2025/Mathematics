@@ -1,0 +1,71 @@
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ['\\(','\\)'] ],
+    processEscapes: true
+  },
+  TeX: {
+    extensions: ["mhchem.js"]
+  },
+  CommonHTML: {
+    matchFontHeight: false
+  }
+});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Yuhai Tu</title>
+<link href="090413.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+</head>
+
+	
+
+
+
+<link href="160324.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+<meta charset="UTF-8">
+<title>equilibrium_reaction</title>
+</head>
+
+<body>
+<p class="X-Large-Bold-RED">ラプラス変換_一次反応</p>
+<p>&nbsp;	</p>
+<p class="Large-Bold-Red">一次の化学反応</p>
+<p>単純な一次の化学平衡において，</p>
+<p>\( \Large      \ce{A -&gt;[\ k \ ]  B} \)</p>
+<p>となります．</p>
+<p>Aの時間変化は，</p>
+<p>\( \Large     \displaystyle A'[t] = -k \cdot A[t] \)</p>
+<p>\( \Large     \displaystyle A'[t] + k \cdot A[t] =0 \)</p>
+<p>となります．ラプラス変換を行うと，微分は，</p>
+<p>\( \Large\color{red}{\mathfrak{ L} \{  \displaystyle \frac{d \ f(t)}{t} \} =  s \ F(s) - f(0)}  \)</p>
+<p>となるので，</p>
+<p>\( \Large     \displaystyle s \ F(s) - A[0] + k \ F(s) =0 \)</p>
+<p>\( \Large     \displaystyle (s+k) \ F(s) = A[0]  \)</p>
+<p>\( \Large     \displaystyle  F(s) = \frac{A[0]}{s+k}  \)</p>
+<p>初期条件</p>
+<p>\( \Large     \displaystyle  A[0] = A_0 \)</p>
+<p>とすると，</p>
+<p>\( \Large     \displaystyle  F(s) = \frac{A_0}{s+k}  \)</p>
+<p>\( \Large  \color{red}{\mathfrak{ L} \{ e^{-at} \} = \displaystyle \frac{1}{s+a}}    \)</p>
+<p>から，</p>
+<p>\( \Large     \displaystyle  A[t] = A_0 \ e^{-kt}  \)</p>
+<p>となり，Aは指数関数的に減少していくことがわかります．</p>
+<p>次は，<span class="Large-Blue">平衡反応</span>です．</p>
+<p>&nbsp;</p>
+<p><span class="style7"><a href="Laplace-04.html"><img src="L-arrow.png" alt="l" width="57" height="34" /></a><a href="kenkyu-2.html"><img src="TOP.png" alt="t" width="57" height="34" /></a></span><a href="Laplace-06.html"><img src="R-arrow.png" alt="r" width="57" height="34" /></a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

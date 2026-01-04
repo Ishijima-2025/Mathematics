@@ -1,0 +1,76 @@
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ['\\(','\\)'] ],
+    processEscapes: true
+  },
+  TeX: {
+    extensions: ["mhchem.js"]
+  },
+  CommonHTML: {
+    matchFontHeight: false
+  }
+});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Yuhai Tu</title>
+<link href="090413.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+</head>
+
+	
+
+
+
+<link href="160324.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+<meta charset="UTF-8">
+<title>Laplace</title>
+</head>
+
+<body>
+<p class="X-Large-Bold-RED">ラプラス変換_運動方程式 - k=ω</p>
+<p>&nbsp;</p>
+<p class="Large-Blue">・ k = ω</p>
+<p>\( \Large           \displaystyle      F(s) =\frac{ s \ f(0)  + f'(0) + 2k   \ f(0)}{s^2  + 2ks+ \omega^2 }  \)</p>
+<p>ですが，k=ω，の場合には，</p>
+<p>\( \Large           \displaystyle      F(s) =\frac{ s \ f(0)  + f'(0) + 2k   \ f(0)}{(s+k)^2 }  \)</p>
+<p>となり，さらに，</p>
+<p>\( \Large           \displaystyle      F(s) =\frac{ s \ f(0)  + f'(0) + 2k   \ f(0)}{(s+k)^2 }  <br>
+  =
+\frac{ (s+k) \ f(0)  + f'(0) + k   \ f(0)}{(s+k)^2} \)</p>
+<p>とすると，</p>
+<p>\( \Large           \displaystyle      F(s) =
+\frac{  f(0)  }{s+k} + \frac{  f'(0) + k   \ f(0)}{(s+k)^2} \)</p>
+<p>と分けることができます．</p>
+<p>\( \Large  \color{red}{\mathfrak{ L} \{ e^{-at} \} = \displaystyle \frac{1}{s+a}}    \)</p>
+<p>\( \Large \displaystyle \color{red}{\mathfrak{ L} \{ t \ e^{-at} \} = \frac{1}{(s+a)^2}}  \)</p>
+<p>を使って，</p>
+<p>\( \Large           \displaystyle      x(t) =
+f(0)  \ e^{-k t}+ \{ f'(0) + k   \ f(0) \} \ t \ e^{-kt} <br>
+=
+\left[ f(0)  + \{ f'(0) + k   \ f(0) \} \ t \right] e^{-kt} \)</p>
+<p>となります．図示すると，</p>
+<p><img src="Laplace-motion-03.png" width="707" height="475" alt=""/></p>
+<p>のように，初期条件，特に初期速度によって振る舞いが変わりますが，振動せずにある一つのピークを持つ（場合のある）曲線となります．</p>
+<p>これを，<a href="https://www.jsme.or.jp/jsme-medwiki/doku.php?id=13:1013521" target="_blank">臨界減衰</a>，と呼ぶようです．</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>次は，<span class="Large-Blue"> k&lt;ω</span>，の場合です．</p>
+<p>&nbsp;</p>
+<p><span class="style7"><a href="Laplace-09.html"><img src="L-arrow.png" alt="l" width="57" height="34" /></a><a href="kenkyu-2.html"><img src="TOP.png" alt="t" width="57" height="34" /></a></span><a href="Laplace-11.html"><img src="R-arrow.png" alt="r" width="57" height="34" /></a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ['\\(','\\)'] ],
+    processEscapes: true
+  },
+  TeX: {
+    extensions: ["mhchem.js"]
+  },
+  CommonHTML: {
+    matchFontHeight: false
+  }
+});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Yuhai Tu</title>
+<link href="090413.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+</head>
+
+
+	
+
+
+
+<link href="160324.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+<meta charset="UTF-8">
+<title>Laplace</title>
+</head>
+
+<body>
+<p class="X-Large-Bold-RED">ラプラス変換_運動方程式</p>
+<p>&nbsp;</p>
+<p><a href="http://www.math.s.chiba-u.ac.jp/~yasuda/denkisugaku/fa-2003-laplace.pdf" target="_blank">こちらのサイト</a>，を参考にしました，ありがとうございました </p>
+<p class="Large-Bold-Red">運動方程式</p>
+<p>運動方程式は，</p>
+<p>\( \Large           \displaystyle m \ \frac{d^2 x}{dt^2} + \gamma \frac{dx}{dt} +K \ x = 0\)</p>
+<p>となります．ここで，</p>
+<p>m : 質量<br>
+γ : 粘性抵抗係数<br>
+K : ばね定数</p>
+<p>です．ここで，</p>
+<p>\( \Large           \displaystyle \omega \equiv \sqrt{ \frac{K}{m}}\)</p>
+<p>\( \Large           \displaystyle k \equiv  \frac{\gamma}{2m}\)</p>
+<p>とすると，</p>
+<p>\( \Large           \displaystyle  \frac{d^2 x}{dt^2} + \frac{\gamma}{m} \frac{dx}{dt} + \frac{K}{m} \ x = \rightarrow  \frac{d^2 x}{dt^2} + 2k \frac{dx}{dt} + \omega^2 \ x = 0\)</p>
+<p>ラプラス変換を行うと，</p>
+<p>\( \Large           \displaystyle      \left[ s^2  \ F(s) - s \ f(0) -f'(0)\right] + 2k \left[  s \ F(s) - f(0) \right] + \omega^2 \ F(s) = 0\)</p>
+<p>\( \Large           \displaystyle      \left[ s^2  + 2ks+ \omega^2 \right]  F(s) - s \ f(0) - f'(0) - 2k   \ f(0)  = 0\)</p>
+<p>\( \Large           \displaystyle      F(s) =\frac{ s \ f(0)  + f'(0) + 2k   \ f(0)}{s^2  + 2ks+ \omega^2 }  \)</p>
+<p>分母に着目すると，分母＝０の場合の解は</p>
+<p>\( \Large           \displaystyle      s^2  + 2ks+ \omega^2 = 0 \)</p>
+<p>\( \Large           \displaystyle      s = \frac{-2k \pm \sqrt{4k^2 -4 \omega^2 }}{2} <br>
+  = - k \pm 
+\sqrt{k^2 - \omega^2} \)</p>
+<p>この平方根の中の値によって解が変わってきます（ｋとωとの大小関係）</p>
+<p>そこで，<br>
+  <span class="Blue-Bold">　k&gt;ω<br>
+  　k=ω<br>
+　k&lt;ω</span><br>
+の場合に分けて考えていきます．</p>
+<p>まずは， <span class="Large-Blue">k&gt;ω</span>，から</p>
+<p>&nbsp;</p>
+<p><span class="style7"><a href="Laplace-07.html"><img src="L-arrow.png" alt="l" width="57" height="34" /></a><a href="kenkyu-2.html"><img src="TOP.png" alt="t" width="57" height="34" /></a></span><a href="Laplace-09.html"><img src="R-arrow.png" alt="r" width="57" height="34" /></a></p>
+<p>&nbsp;</p>
+</body>
+</html>

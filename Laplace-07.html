@@ -1,0 +1,109 @@
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ['\\(','\\)'] ],
+    processEscapes: true
+  },
+  TeX: {
+    extensions: ["mhchem.js"]
+  },
+  CommonHTML: {
+    matchFontHeight: false
+  }
+});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Yuhai Tu</title>
+<link href="090413.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+</head>
+
+
+	
+
+
+
+<link href="160324.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+<meta charset="UTF-8">
+<title>Laplace</title>
+</head>
+
+<body>
+<p class="X-Large-Bold-RED">ラプラス変換_逐次反応</p>
+<p>&nbsp;</p>
+<p><a href="https://www.youtube.com/watch?v=jEwfJr-NMIA" target="_blank">こちらのサイト</a>，を参考にしました，ありがとうございました </p>
+<p class="Large-Bold-Red">逐次反応</p>
+<p>逐次反応において，</p>
+<p>\( \Large      \ce{x -&gt;[\ k_1 \ ]  y -&gt;[\ k_2 \ ]  z} \)</p>
+<p>となります．</p>
+<p>x,y,zの時間変化は，</p>
+<p>\( \Large     \displaystyle x'[t] = -k_{1} \cdot x[t] \)</p>
+<p>\( \Large     \displaystyle y'[t] = k_{1} \cdot x[t] - k_{2} \cdot y[t]\)</p>
+<p>\( \Large     \displaystyle z'[t] = k_{2} \cdot y[t] \)</p>
+<p>\( \Large     \displaystyle x[t] + y[t] + z[t] = 1 \)</p>
+<p>初期条件として，</p>
+<p>\( \Large     \displaystyle x[0] =1, \ y[0] = z[0] = 0 \)</p>
+<p>とします．</p>
+<p>ｘに関しては，一次反応と同じなので，</p>
+<p>\( \Large     \displaystyle  x[t] =  e^{-k_1 t}  \)</p>
+<p>ラプラス変換した値は，</p>
+<p>\( \Large     \displaystyle  X[s] =  \frac{1}{s+k_1 }  \)</p>
+<p>となります．</p>
+<p>&nbsp;</p>
+<p>yについてラブラス変換を行うと，</p>
+<p>\( \Large     \displaystyle s \ Y[s] - y[0] =  k_{1} \cdot X[s] - k_{2} \ Y[s]  \)</p>
+<p>\( \Large     \displaystyle (s+k_2) \ Y[s] = y[0] +  k_{1} \cdot X[s]  =   \frac{k_1}{s+k_1 }\)</p>
+<p>\( \Large     \displaystyle  Y[s]   =   \frac{k_1}{(s+k_1)(s+k_2)  }\)</p>
+<p>右辺を部分分数分解を行うと，</p>
+<p>\( \Large     \displaystyle   \frac{ k_{1}}{(s+k_1)(s+k_2)} = k_{1} \left\{ \frac{ \alpha}{s+k_1} + \frac{ \beta}{s+k_2} \right\} <br>
+  =
+k_{1} \frac{ \alpha (s+k_2) + \beta \ (s+k_1)}{(s+k_1)(s+k_2)}<br>
+=
+k_{1} \frac{ (\alpha + \beta)s + \alpha \ k_2+\beta k_1}{s(s+k)}\)</p>
+<p>したがって，</p>
+<p>\( \Large     \displaystyle   \alpha + \beta = 0 \rightarrow \alpha = - \beta\)</p>
+<p>\( \Large     \displaystyle    \alpha \ k_2+\beta k_1=1 \rightarrow \alpha \ k_2-\alpha k_1=1<br>
+\rightarrow \alpha (-k_1 +  k_2)=1 \)</p>
+<p>\( \Large     \displaystyle \alpha = \frac{1}{k_2 -  k_1}\)  </p>
+<p>\( \Large     \displaystyle \beta = -\frac{1}{k_2 -  k_1}\) </p>
+<p>\( \Large     \displaystyle  Y[s]   =   \frac{k_1}{(s+k_1)(s+k_2)  }<br>
+  = 
+\frac{k_1}{k_2 -  k_1} \left\{ \frac{ 1}{s+k_1} - \frac{ 1}{s+k_2} \right\} \)</p>
+<p>\( \Large  \color{red}{\mathfrak{ L} \{ e^{-at} \} = \displaystyle \frac{1}{s+a}}    \)</p>
+<p>から，</p>
+<p>\( \Large     \displaystyle  y[t]   = 
+\frac{k_1}{k_2 -  k_1} \left\{ e^{-k_1 \ t} - e^{-k_2 t} \right\} \)</p>
+<p>&nbsp;</p>
+<p>zは，</p>
+<p>\( \Large     \displaystyle  z[t]   = 
+1 - x[t]- y[t] \)</p>
+<p>となるので，</p>
+<p>\( \Large     \displaystyle  z[t]   = 
+1 -   e^{-k_1 t}-  
+\frac{k_1}{k_2 -  k_1} \left\{ e^{-k_1 \ t} - e^{-k_2 t} \right\} \)</p>
+<p>\( \Large               \hspace{30 pt} \displaystyle     = 
+1 -\frac{k_2 - k_1}{k_2 -  k_1}   e^{-k_1 t}-  
+\frac{k_1}{k_2 -  k_1}  e^{-k_1 \ t} - \frac{k_1}{k_2 -  k_1}e^{-k_2 t}  \)</p>
+<p>\( \Large               \hspace{30 pt} \displaystyle     = 
+1 -\frac{k_2 }{k_2 -  k_1}   e^{-k_1 t}- \frac{k_1}{k_2 -  k_1}e^{-k_2 t}  \)</p>
+<p>となります．</p>
+<p>逆反応が存在する逐次反応や，3つの状態が循環する反応も解いてみようと思ったのですが．．．．複雑しすぎて諦めました．</p>
+<p>次は，<span class="Large-Blue">運動方程式</span>です．</p>
+<p>&nbsp;</p>
+<p><span class="style7"><a href="Laplace-06.html"><img src="L-arrow.png" alt="l" width="57" height="34" /></a><a href="kenkyu-2.html"><img src="TOP.png" alt="t" width="57" height="34" /></a></span><a href="Laplace-08.html"><img src="R-arrow.png" alt="r" width="57" height="34" /></a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>
