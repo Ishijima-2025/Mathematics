@@ -1,0 +1,59 @@
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ['\\(','\\)'] ],
+    processEscapes: true
+  },
+  TeX: {
+    extensions: ["mhchem.js"]
+  },
+  CommonHTML: {
+    matchFontHeight: false
+  }
+});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Maclaurin</title>
+<link href="090413.css" rel="stylesheet" type="text/css" />
+<link href="160324.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+
+.style7 {color: #000000; }
+
+.style10 {color: #000000; }
+
+.style1 {color: #0000FF}
+
+</style>
+</head>
+
+<body>
+<p><span class="X-Large-Bold-RED">マクローリン展開-03</span></p>
+<p>次は，<br />
+  　<span class="Large-Bold-RED">余弦波</span><br />
+つまり，<span class="Large-Bold-RED">cos波</span>，について考えていきましょう．</p>
+<p><span class="Large-Bold-RED">f(x)=cos x</span>，とすると，</p>
+<p>\(\Large \displaystyle   f(x) =  cos \ x \hspace{55pt} f(0) = 1 \)</p>
+<p>\(\Large \displaystyle   f'(x) =  - sin \ x \hspace{40pt} f'(0) = 0 \)</p>
+<p>\(\Large \displaystyle   f''(x) =  - cos \ x \hspace{35pt} f''(0) = -1 \)</p>
+<p>\(\Large \displaystyle   f'''(x) =  sin \ x \hspace{42pt} f'''(0) = 0 \)</p>
+<p>\(\Large \displaystyle   f''''(x) =   cos \ x \hspace{40pt} f''''(0) = 1 \)</p>
+<p>のように，4回周期で値が変化します．従って，</p>
+<p>\(\Large \displaystyle   f(x)  = \sum_{i=0}^{\infty} \frac{f^{(n)}(0)}{n!} x^i   \)</p>
+<p>\(\Large \displaystyle   = \frac{1}{1} \cdot 1 +  \frac{0}{1} \cdot x -  \frac{1}{2 \cdot 1} \cdot x^2 - \frac{0}{3 \cdot 2 \cdot 1} \cdot x^3 + \frac{1}{ 4 \cdot 3 \cdot 2 \cdot 1} \cdot x^4<br>
+  + \frac{0}{ 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1} \cdot x^5 \cdots \)</p>
+<p>\(\Large \displaystyle   =  1  - \frac{1}{ 2 \cdot 1} \cdot x^2 + \frac{1}{  4 \cdot 3 \cdot 2 \cdot 1} \cdot x^4 \cdots \)</p>
+<p>のように，iが奇数の場合のみ値を持つ和となります． </p>
+<p>次は，指数関数，<span class="Large-Red">e<sup>ix</sup></span>を考えていきましょう．<br />
+  　<br />
+</p>
+<p><span class="style7"><a href="Maclaurin-02.html"><img src="L-arrow.png" alt="l" width="57" height="34" /></a> <a href="index.html"><img src="TOP.png" alt="t" width="57" height="34" /></a> <a href="Maclaurin-04.html"><img src="R-arrow.png" alt="r" width="57" height="34" border="0" /></a></span></p>
+</body>
+</html>
