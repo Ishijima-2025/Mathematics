@@ -1,0 +1,56 @@
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ['\\(','\\)'] ],
+    processEscapes: true
+  },　　
+  TeX: {
+    extensions: ["mhchem.js"]
+  },
+  CommonHTML: {
+    matchFontHeight: false
+  }
+});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Euler</title>
+<link href="250219.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+</head>
+
+<body>
+<p><span class="Red-Large-Bold">eix=i sin x + cos xのメリット</span></p>
+<p>この関係式がどのように便利であるか？ <br />
+その一つの例として，sin(a+b)を考えてみましょう． <br />
+公式集によると， </p>
+<p>\( \Large \displaystyle  sin (a+b) = sin \ a \ cos \ b + cos \ a  \ sin \ b \)</p>
+<p>とありますが，なかなか三角関数の公式を覚えるのは大変ですね．<br />
+これを指数関数で考えてみましょう．</p>
+<p>\( \Large \displaystyle  e^{ix} = cos \ x + i \ sin \ x \)</p>
+<p>であるので，<br />
+  <span class="Large-Bold-RED">　eixの実数部分：cos x<br />
+　eixの虚数部分：sin x</span><br />
+となります．<br />
+つまり，<br />
+　<span class="Large-Bold-RED">指数で計算して，実数，虚数部分を取り出せば，cos，sin成分</span><br />
+となることがわかります． 実際に計算してみると， </p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle  \begin{eqnarray} e^{i(a+b)} &amp;=&amp; e^{ia} \cdot e^{ib} \\<br>
+  &amp;=&amp; ( cos \ a + i \ sin \ a) \cdot (cos \ b +i \ sin \ b) \\<br>
+&amp;=&amp; cos \  a \cdot cos \ b + i \ cos \ a \cdot sin \ b + i \ sin \ a \cdot cos \ b - sin \ a \cdot sin \ b <br>
+\end{eqnarray} \)</span></p>
+<p>\( \Large \displaystyle  Im \left[ e^{i(a+b)} \right] = cos \ a \cdot sin \ b + sin \ a \cdot cos \ b \)</p>
+<p>= <span class="X-Large-Bold-RED">cos \ a \cdot sin \ b + \ sin \ a \cdot cos \ b </span>\)</p>
+<p>となり，簡単に解くことができますね．</p>
+<p>次に，e<sup>ix</sup>=i sin x + cos x，の別表示の仕方を考えましょう．</p>
+<p>&nbsp;</p>
+<p><span class="style7"><a href="Euler-07.html"><img src="L-arrow.png" alt="l" width="57" height="34" border="0" /></a> <a href="index.html"><img src="TOP.png" alt="t" width="57" height="34" /></a> <a href="Euler-09.html"><img src="R-arrow.png" alt="r" width="57" height="34" border="0" /></a></span></p>
+</body>
+</html>

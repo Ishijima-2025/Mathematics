@@ -1,0 +1,48 @@
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ['\\(','\\)'] ],
+    processEscapes: true
+  },　　
+  TeX: {
+    extensions: ["mhchem.js"]
+  },
+  CommonHTML: {
+    matchFontHeight: false
+  }
+});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Euler</title>
+<link href="250219.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+</head>
+
+<body>
+<p><span class="Red-Large-Bold">e<sup>ix</sup>=i sin x + cos xの導き出し方</span></p>
+<p>マクローリン展開の，<a href="Maclaurin-02.html">sin波の場合</a>，<a href="Maclaurin-03.html">cos波の場合</a>にあるように，</p>
+<p>\( \Large \displaystyle sin \ x = x - \frac{1}{3 \cdot 2 \cdot 1} \cdot x^3 + \frac{1}{5 \cdot 4 \cdot 3 \cdot 2 \cdot 1} \cdot x^5 + \cdots \)</p>
+<p>\( \Large \displaystyle cos \ x = 1 - \frac{1}{ 2 \cdot 1} \cdot x^2 + \frac{1}{ 4 \cdot 3 \cdot 2 \cdot 1} \cdot x^4 + \cdots \)</p>
+<p>と，sin波，cos波，は交互にべき乗の値の和となります． <br />
+また，指数関数eixのマクローリン展開は， </p>
+<p>\( \Large \displaystyle e^{ix} = \frac{1}{1} \cdot 1 + \frac{i}{1} \cdot x - \frac{1}{ 2 \cdot 1} \cdot x^2 -\frac{i}{3 \cdot 2 \cdot 1} \cdot x^3 + \frac{1}{ 4 \cdot 3 \cdot 2 \cdot 1} \cdot x^4 + \frac{i}{5 \cdot 4 \cdot 3 \cdot 2 \cdot 1} \cdot x^5 + \cdots \)</p>
+<p>\( \Large \displaystyle  = \left[ 1 - \frac{1}{ 2 \cdot 1} \cdot x^2 + \frac{1}{ 4 \cdot 3 \cdot 2 \cdot 1} \cdot x^4 + \cdots \right] <br>
++ i \left[  x  -\frac{1}{3 \cdot 2 \cdot 1} \cdot x^3  + \frac{1}{5 \cdot 4 \cdot 3 \cdot 2 \cdot 1} \cdot x^5 + \cdots \right] \)</p>
+<p>と実数部分と虚数部分に分けることができます．つまり，</p>
+<p>\( \Large \displaystyle  e^{ix} = \left[ 1 - \frac{1}{ 2 \cdot 1} \cdot x^2 + \frac{1}{ 4 \cdot 3 \cdot 2 \cdot 1} \cdot x^4 + \cdots \right] <br>
++ i \left[  x  -\frac{1}{3 \cdot 2 \cdot 1} \cdot x^3  + \frac{1}{5 \cdot 4 \cdot 3 \cdot 2 \cdot 1} \cdot x^5 + \cdots \right] \)</p>
+<p>\( \Large \displaystyle  = cos \ x + i \ sin \ x \)</p>
+<p>となって，<span class="Large-Bold-RED">e<sup>ix</sup>=i sin x + cos x</span>，を導き出すことができました．</p>
+<p>さて，次に，　<span class="Large-Bold-RED">e<sup>iπ</sup>=-1</span>，
+を導き出しましょう．</p>
+<p><span class="style7"><a href="Euler-05.html"><img src="L-arrow.png" alt="l" width="57" height="34" /></a> <a href="index.html"><img src="TOP.png" alt="t" width="57" height="34" /></a> <a href="Euler-07.html"><img src="R-arrow.png" alt="r" width="57" height="34" border="0" /></a></span></p>
+</body>
+</html>

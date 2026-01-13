@@ -1,0 +1,107 @@
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ['\\(','\\)'] ],
+    processEscapes: true
+  },　　
+  TeX: {
+    extensions: ["mhchem.js"]
+  },
+  CommonHTML: {
+    matchFontHeight: false
+  }
+});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Euler</title>
+<link href="250219.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+</head>
+
+	
+
+
+
+
+<title>Laplace</title>
+</head>
+
+<body>
+<p class="Red-Large-Bold">三角関数の公式_オイラーの公式を使って </p>
+<p class="Blue-Large-Bold">加法定理</p>
+<p class="X-Large-Bold-RED">&nbsp;</p>
+<p class="X-Large-Bold-RED">\( \Large     \displaystyle  \begin{eqnarray} \boldsymbol{ \LARGE {sin \ (x \pm y) }}<br />
+  &amp;=&amp;  Im \left[ e^{i(x \pm y)} \right]   \\<br>
+  &amp;=&amp; 
+Im \left[ e^{ix} \cdot e^{ \pm iy} \right] \\<br>
+&amp;=&amp;  Im \left[ ( cos \ x +i \ sin \ x) \times \{ cos ( \pm y) + i \ sin ( \pm y) \}  \right] \\<br>
+&amp;=&amp;  Im \left[ ( cos \ x \cdot cos \ y \mp  sin \ x \cdot sin \ y ) + i( sin \ x \cdot cos \ y \pm  cos \ x \cdot sin \ y ) \right] \\<br>
+&amp;=&amp;   \boldsymbol{ \LARGE {sin \ x \cdot cos \ y \pm  cos \ x \cdot sin \ y }}<br>
+\end{eqnarray} \)</p>
+<p class="X-Large-Bold-RED">\( \Large     \displaystyle  \begin{eqnarray} \boldsymbol{ \LARGE {cos \ (x \pm y) }}<br />
+  &amp;=&amp;  Re \left[ e^{i(x \pm y)} \right]   \\<br>
+&amp;=&amp; 
+Re \left[ e^{ix} \cdot e^{ \pm iy} \right] \\<br>
+&amp;=&amp;  Re \left[ ( cos \ x +i \ sin \ x) \times \{ cos ( \pm y) + i \ sin ( \pm y) \}  \right] \\<br>
+&amp;=&amp;  Re \left[ ( cos \ x \cdot cos \ y \mp  sin \ x \cdot sin \ y ) + i( sin \ x \cdot cos \ y \pm  cos \ x \cdot sin \ y ) \right] \\<br>
+&amp;=&amp;\boldsymbol{ \LARGE {cos \ x \cdot cos \ y \mp  sin \ x \cdot sin \ y}}<br>
+\end{eqnarray} \)</p>
+<p class="X-Large-Bold-RED">&nbsp;</p>
+<p class="X-Large-Bold-RED"><span class="Blue-Large-Bold">倍角の公式</span></p>
+<p class="Blue-Bold">二倍角</p>
+<p class="X-Large-Bold-RED">\( \Large     \displaystyle  \begin{eqnarray} \boldsymbol{ \LARGE {sin \ (2 \theta) }}<br />
+  &amp;=&amp;  Im \left[ e^{2 i  \theta)} \right]   \\<br>
+&amp;=&amp; 
+Im \left[ e^{i  \theta} \cdot e^{ i  \theta} \right] \\<br>
+&amp;=&amp;  Im \left[ ( cos \  \theta +i \ sin \  \theta) ^2 \right] \\<br>
+&amp;=&amp;  Im \left[ ( cos^2  \theta  + 2 i \ sin  \theta \ cos  \theta - sin^2  \theta ) \right] \\<br>
+&amp;=&amp; \boldsymbol{ \LARGE {2 \ sin  \theta \ cos  \theta}}<br>
+\end{eqnarray} \)</p>
+<p class="X-Large-Bold-RED">\( \Large     \displaystyle  \begin{eqnarray} \boldsymbol{ \LARGE {cos \ (2 \theta) }}<br />
+  &amp;=&amp;  Re \left[ e^{2 i  \theta)} \right]   \\<br>
+&amp;=&amp; 
+Re \left[ e^{i  \theta} \cdot e^{ i  \theta} \right] \\<br>
+&amp;=&amp;  Re \left[ ( cos \  \theta +i \ sin \  \theta) ^2 \right] \\<br>
+&amp;=&amp;  Re \left[ ( cos^2  \theta  + 2 i \ sin  \theta \ cos  \theta - sin^2  \theta ) \right] \\<br>
+&amp;=&amp; \boldsymbol{ \LARGE {cos^2  \theta   - sin^2  \theta}}<br>
+\end{eqnarray} \)</p>
+<p class="X-Large-Bold-RED">&nbsp;</p>
+<p class="Blue-Bold">三倍角</p>
+<p class="X-Large-Bold-RED">\( \Large     \displaystyle  \begin{eqnarray} \boldsymbol{ \LARGE {sin \ (3 \theta) }}<br />  &amp;=&amp;  Im \left[ e^{3 i  \theta)} \right]   \\<br />
+  &amp;=&amp; 
+  Im \left[ e^{i  \theta} \cdot e^{ i  \theta}  \cdot e^{ i  \theta} \right] \\<br />
+  &amp;=&amp;  Im \left[ ( cos \  \theta +i \ sin \  \theta) ^3 \right] \\<br />
+  &amp;=&amp;  Im \left[ ( cos^3  \theta  + 3 i \ sin  \theta \ cos^2  \theta - 3  \ sin^2  \theta \ cos  \theta- i \ sin^3  \theta ) \right] \\<br />
+  &amp;=&amp;   3 \ sin  \theta \ cos^2  \theta - sin^3  \theta \\<br />  
+  &amp;=&amp;   3 \ sin  \theta \ cos^2  \theta - sin^3  \theta +3 \ sin^2  \theta \ sin  \theta - 3 \ sin^2  \theta \ sin  \theta \\<br />
+  &amp;=&amp;   3 \ sin  \theta \ (sin^2 \theta + cos^2  \theta) - sin^3  \theta  - 3 \ sin^3  \theta  \\<br />
+  &amp;=&amp; \boldsymbol{ \LARGE {3 \ sin  \theta -4 \ sin^3  \theta }}<br />
+  \end{eqnarray} \)</p>
+<p class="X-Large-Bold-RED">\( \Large     \displaystyle  \begin{eqnarray} \boldsymbol{ \LARGE {cos \ (3 \theta) }}<br />  
+  &amp;=&amp;  Re \left[ e^{3 i  \theta)} \right]   \\<br />
+  &amp;=&amp; 
+  Re \left[ e^{i  \theta} \cdot e^{ i  \theta}  \cdot e^{ i  \theta} \right] \\<br />
+  &amp;=&amp;  Re \left[ ( cos \  \theta +i \ sin \  \theta) ^3 \right] \\<br />
+  &amp;=&amp;  Re \left[ ( cos^3  \theta  + 3 i \ sin  \theta \ cos^2  \theta - 3  \ sin^2  \theta \ cos  \theta- i \ sin^3  \theta ) \right] \\<br />
+  &amp;=&amp; cos^3  \theta   - 3  \ sin^2  \theta \ cos  \theta \\<br />
+  &amp;=&amp; cos^3  \theta   - 3  \ sin^2  \theta \ cos  \theta - 3  \ cos^2  \theta \ cos  \theta  + 3  \ cos^2  \theta \ cos  \theta \\<br />
+  &amp;=&amp; cos^3  \theta   - 3  \ (sin^2 \theta  + cos^2 \theta)  \ cos  \theta - 3  \ cos^2  \theta \ cos  \theta  + 3  \ cos^3   \\ <br />
+  &amp;=&amp; \boldsymbol{ \LARGE {4 \ cos^3  \theta   - 3   \ cos  \theta}}<br />
+\end{eqnarray} \)</p>
+<p class="X-Large-Bold-RED">&nbsp;</p>
+<p class="X-Large-Bold-RED">次は，<span class="Blue-Large">和積公式</span>，</p>
+<p class="X-Large-Bold-RED">&nbsp;</p>
+<p><span class="style7"><a href="Euler-10.html"><img src="L-arrow.png" alt="l" width="57" height="34" /></a><a href="index.html"><img src="TOP.png" alt="t" width="57" height="34" /></a></span><a href="Euler-12.html"><img src="R-arrow.png" alt="r" width="57" height="34" /></a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

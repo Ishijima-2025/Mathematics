@@ -1,0 +1,83 @@
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ['\\(','\\)'] ],
+    processEscapes: true
+  },　　
+  TeX: {
+    extensions: ["mhchem.js"]
+  },
+  CommonHTML: {
+    matchFontHeight: false
+  }
+});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Euler</title>
+<link href="250219.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+</head>
+
+<body>
+<p><span class="Red-Large-Bold">eの値の導き出し方-03</span></p>
+<p>tの値をどんどん0に近づけていけばいいわけです．</p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle  a = \lim_{ t \to 0 } \left( 1 + t \right)^{\frac{1 }{ t}}  \)</span></p>
+<p>とりあえず，t=1，はどうなるでしょう？<br />
+  　(1+1)<sup>1</sup>=2<br />
+となり，a=2，となります．<br />
+どんどん近づけていくと，</p>
+<table width="200" border="1">
+  <tr>
+    <td>t</td>
+    <td>a</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>2.000000</td>
+  </tr>
+  <tr>
+    <td>0.1</td>
+    <td>2.593742</td>
+  </tr>
+  <tr>
+    <td>0.01</td>
+    <td>2.704814</td>
+  </tr>
+  <tr>
+    <td>0.001</td>
+    <td>2.716924</td>
+  </tr>
+  <tr>
+    <td>0.0001</td>
+    <td>2.718146</td>
+  </tr>
+  <tr>
+    <td>0.00001</td>
+    <td>2.718268</td>
+  </tr>
+  <tr>
+    <td>0.000001</td>
+    <td>2.718280</td>
+  </tr>
+  <tr>
+    <td>0.0000001</td>
+    <td>2.718282</td>
+  </tr>
+</table>
+<p>となり，a=2.718282…となります．<br />
+この値を，e，とします． つまり， </p>
+<p>\( \Large \displaystyle \frac{d \ e^x}{dx} = e^x \)</p>
+<p>となるのです．</p>
+<p>  次にe<sup>ix</sup>=i sin x + cos xの導き出し方を考えましょう．．<br />
+</p>
+<p><span class="style7"><a href="Euler-04.html"><img src="L-arrow.png" alt="l" width="57" height="34" /></a> <a href="index.html"><img src="TOP.png" alt="t" width="57" height="34" /></a> <a href="Euler-06.html"><img src="R-arrow.png" alt="r" width="57" height="34" border="0" /></a></span></p>
+</body>
+</html>

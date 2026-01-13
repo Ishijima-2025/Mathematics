@@ -1,0 +1,53 @@
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ['\\(','\\)'] ],
+    processEscapes: true
+  },　　
+  TeX: {
+    extensions: ["mhchem.js"]
+  },
+  CommonHTML: {
+    matchFontHeight: false
+  }
+});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Euler</title>
+<link href="250219.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+</head>
+
+<body>
+<p><span class="Red-Large-Bold">eの値の導き出し方-02</span></p>
+<p>このまた，微分の公式は，</p>
+<p>\( \Large \displaystyle \frac{d \ y}{dx} = \displaystyle \lim_{ \Delta x \to 0 } \frac{ \Delta y }{ \Delta x} \)</p>
+<p>と書くこともできるので，</p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle  \begin{eqnarray} \frac{dy }{ dx}<br>
+&amp;=&amp; \lim_{ \Delta x \to 0 } \frac{y }{ log_a \ A} \\<br>
+&amp;=&amp; \lim_{ \Delta x \to 0 } \frac{a^x }{ log_a \ A} \\<br>
+&amp;=&amp; a^x \times \lim_{ \Delta x \to 0 } \frac{1 }{ log_a \ A} \\<br>
+\end{eqnarray} \)</span></p>
+<p>となります．つまり．．．．</p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle \lim_{ \Delta x \to 0 } [ log_a \ A] = 1 \)</span></p>
+<p>を満たせば，aの値を求めることができます．これは，</p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle a^1 = a = A \)</span></p>
+<p>と同義であるので， </p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle  a = A = \lim_{ \Delta y \to 0 } \left( 1 + \frac{\Delta y}{  y} \right)^{\frac{y }{ \Delta y}}  \)</span></p>
+<p>となります（ここで，Δｘ→０の時，Δｙ→０ので）． <br />
+ここで，Δｙ/y＝ｔ，と置けば， </p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle  a = \lim_{ t \to 0 } \left( 1 + t \right)^{\frac{1 }{ t}}  \)</span></p>
+<p>となり，aの値を求めることができます．<br />
+次ページに行きましょう．<br />
+</p>
+<p><span class="style7"><a href="Euler-03.html"><img src="L-arrow.png" alt="l" width="57" height="34" /></a> <a href="index.html"><img src="TOP.png" alt="t" width="57" height="34" /></a> <a href="Euler-05.html"><img src="R-arrow.png" alt="r" width="57" height="34" border="0" /></a></span></p>
+</body>
+</html>

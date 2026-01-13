@@ -1,0 +1,93 @@
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ['\\(','\\)'] ],
+    processEscapes: true
+  },　　
+  TeX: {
+    extensions: ["mhchem.js"]
+  },
+  CommonHTML: {
+    matchFontHeight: false
+  }
+});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Euler</title>
+<link href="250219.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+</head>
+
+	
+
+
+
+
+<title>Laplace</title>
+</head>
+
+<body>
+<p class="Red-Large-Bold">三角関数の公式_オイラーの公式を使って </p>
+<p class="Blue-Large-Bold">べき乗</p>
+<p class="Blue-Bold">二乗</p>
+<p class="X-Large-Bold-RED">&nbsp;</p>
+<p class="X-Large-Bold-RED">\( \Large     \displaystyle  \begin{eqnarray} \boldsymbol{ \LARGE {sin^2 \ \theta }}<br>
+  &amp;=&amp;   \frac{e^{i \theta } -e^{-i \theta }}{2i}  \frac{e^{i  \theta } -e^{-i \theta }}{2i}\\<br>
+  &amp;=&amp; 
+-\frac{1}{4} \left[ e^{2i \theta } -  1 - 1 + e^{2i \theta } \right] \\<br>
+&amp;=&amp; \frac{1}{2} - \frac{cos \ 2 \theta}{2} \\<br>
+&amp;=&amp; \boldsymbol{ \LARGE {\frac{1 - cos \ 2 \theta}{2} }}<br>
+\end{eqnarray} \)</p>
+<p class="X-Large-Bold-RED">\( \Large     \displaystyle  \begin{eqnarray} \boldsymbol{ \LARGE {cos^2 \ \theta }}<br>
+&amp;=&amp;   \frac{e^{i \theta } +e^{-i \theta }}{2}  \frac{e^{i  \theta } +e^{-i \theta }}{2}\\<br>
+&amp;=&amp; 
+\frac{1}{4} \left[ e^{2i \theta } +  1 + 1 + e^{2i \theta } \right] \\<br>
+&amp;=&amp; \frac{1}{2} + \frac{cos \ 2 \theta}{2} \\<br>
+&amp;=&amp; \boldsymbol{ \LARGE {\frac{1 + cos \ 2 \theta}{2} }}<br>
+\end{eqnarray} \)</p>
+<p class="X-Large-Bold-RED">&nbsp;</p>
+<p class="Blue-Bold">三乗</p>
+<p class="X-Large-Bold-RED"><a href="Euler-11.html">3倍角の公式</a>から，</p>
+<p class="X-Large-Bold-RED">\( \Large     \displaystyle sin \ (3 \theta) =3 \ sin  \theta -4 \ sin^3  \theta  \)</p>
+<p class="X-Large-Bold-RED">\( \Large     \displaystyle \boldsymbol{ \LARGE {sin^3  \theta = \frac{ 3 \ sin  \theta -  sin \ (3 \theta) }{4}}}    \)</p>
+<p class="X-Large-Bold-RED">&nbsp;</p>
+<p class="X-Large-Bold-RED">\( \Large     \displaystyle  cos \ (3 \theta)= 4 \ cos^3  \theta   - 3   \ cos  \theta \)</p>
+<p class="X-Large-Bold-RED">\( \Large     \displaystyle \boldsymbol{ \LARGE {cos^3  \theta = \frac{ 3 \ cos  \theta +  cos \ (3 \theta) }{4}}}    \)</p>
+<p class="X-Large-Bold-RED">&nbsp;</p>
+<p class="Blue-Bold">四乗</p>
+<p class="X-Large-Bold-RED">\( \Large     \displaystyle  sin^2 \ \theta = \frac{1 - cos \ 2 \theta}{2} \)</p>
+<p class="X-Large-Bold-RED">\( \Large     \displaystyle  \begin{eqnarray} \boldsymbol{ \LARGE {sin^4 \ \theta }}<br />
+&amp;=&amp;   \left( \frac{1 - cos \ 2 \theta}{2} \right)^2 \\<br />
+&amp;=&amp; 
+\frac{1}{4} \left( 1 - 2 \ cos \ 2 \theta + cos^2 2 \theta \right) \\<br />
+&amp;=&amp; 
+\frac{1}{4} \left( 1 - 2 \ cos \ 2 \theta + \frac{ 1+ cos 4 \theta}{2} \right) \\<br />
+&amp;=&amp; \boldsymbol{ \LARGE {\frac{3 - 4 \ cos \ 2 \theta+ cos \ 4 \theta}{8} }}<br />
+\end{eqnarray} \)</p>
+<p class="X-Large-Bold-RED">&nbsp;</p>
+<p class="X-Large-Bold-RED">\( \Large     \displaystyle  cos^2 \ \theta = \frac{1 + cos \ 2 \theta}{2} \)</p>
+<p class="X-Large-Bold-RED">\( \Large     \displaystyle  \begin{eqnarray} \boldsymbol{ \LARGE {cos^4 \ \theta }}<br />
+  &amp;=&amp;   \left( \frac{1 + cos \ 2 \theta}{2} \right)^2 \\<br />
+  &amp;=&amp; 
+  \frac{1}{4} \left( 1 + 2 \ cos \ 2 \theta + cos^2 2 \theta \right) \\<br />
+  &amp;=&amp; 
+  \frac{1}{4} \left( 1 + 2 \ cos \ 2 \theta + \frac{ 1+ cos 4 \theta}{2} \right) \\<br />
+  &amp;=&amp; \boldsymbol{ \LARGE {\frac{3 + 4 \ cos \ 2 \theta+ cos \ 4 \theta}{8} }}<br />
+\end{eqnarray} \)</p>
+<p class="X-Large-Bold-RED">&nbsp;</p>
+<p class="X-Large-Bold-RED">次は，<span class="Blue-Large">その他</span>，</p>
+<p class="X-Large-Bold-RED">&nbsp;</p>
+<p><span class="style7"><a href="Euler-12.html"><img src="L-arrow.png" alt="l" width="57" height="34" /></a><a href="index.html"><img src="TOP.png" alt="t" width="57" height="34" /></a></span><a href="Euler-14.html"><img src="R-arrow.png" alt="r" width="57" height="34" /></a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

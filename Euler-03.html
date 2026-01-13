@@ -1,0 +1,64 @@
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ['\\(','\\)'] ],
+    processEscapes: true
+  },　　
+  TeX: {
+    extensions: ["mhchem.js"]
+  },
+  CommonHTML: {
+    matchFontHeight: false
+  }
+});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Euler</title>
+<link href="250219.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+</head>
+
+<body>
+<p><span class="Red-Large-Bold">eの値の導き出し方-01</span></p>
+<p>この，e，はどんな値となるでしょうか？</p>
+<p>\( \Large \displaystyle y = a^x \)</p>
+<p>として，先の微分の公式に当てはめて，a，を求めてみましょう．<br />
+ここで，まず上記の式を変形して， </p>
+<p>\( \Large \displaystyle x = log_a \ y \)</p>
+<p>と置き換えます．そして，</p>
+<p>\( \Large \displaystyle x + \Delta x = log_a \ (y + \Delta y) \)</p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle  \begin{eqnarray} \Delta x <br>
+&amp;=&amp; log_a \ (y + \Delta y) - x \\<br>
+&amp;=&amp; 
+log_a \ (y + \Delta y) - log_a \ y \\<br>
+&amp;=&amp; 
+log_a \left( \frac{y + \Delta y}{  y} \right) \\<br>
+&amp;=&amp; 
+log_a \left( 1 + \frac{\Delta y}{  y} \right)<br>
+\end{eqnarray} \)</span></p>
+<p>とΔｘを導き出します．<br />
+ここで，両辺をΔｙで割り，さらに右辺にy/yをかけます．</p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle  \begin{eqnarray} \frac{\Delta x }{ \Delta y}<br>
+&amp;=&amp; \frac{y }{  y}\frac{1 }{ \Delta y}
+log_a \left( 1 + \frac{\Delta y}{  y} \right) \\<br>
+&amp;=&amp; \frac{1 }{  y}\frac{y }{ \Delta y}log_a \left( 1 + \frac{\Delta y}{  y} \right) \\<br>
+&amp;=&amp; \frac{1 }{  y} 
+log_a \left( 1 + \frac{\Delta y}{  y} \right)^{\frac{y }{ \Delta y}} \\<br>
+&amp;=&amp; \frac{1 }{  y} 
+log_a A<br>
+\end{eqnarray} \)</span></p>
+<p>ここで，</p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle  A \equiv \left( 1 + \frac{\Delta y}{  y} \right)^{\frac{y }{ \Delta y}}  \)</span></p>
+<p>とおきました．次ページに行きましょう．<br />
+</p>
+<p><span class="style7"><a href="Euler-02.html"><img src="L-arrow.png" alt="l" width="57" height="34" /></a> <a href="index.html"><img src="TOP.png" alt="t" width="57" height="34" /></a> <a href="Euler-04.html"><img src="R-arrow.png" alt="r" width="57" height="34" border="0" /></a></span></p>
+</body>
+</html>
