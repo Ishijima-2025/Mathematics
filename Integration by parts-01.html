@@ -1,0 +1,354 @@
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ['\\(','\\)'] ],
+    processEscapes: true
+  },
+  TeX: {
+    extensions: ["mhchem.js"]
+  },
+  CommonHTML: {
+    matchFontHeight: false
+  }
+});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>instantaneous partial integration</title>
+<link href="250219.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+</head>
+
+	
+
+
+
+
+<title>Laplace</title>
+</head>
+
+<body>
+<p class="Red-Large-Bold">瞬間部分積分</p>
+<p class="Red-Large-Bold">&nbsp;</p>
+<p>部分積分，結構面倒ですね．特に三角関数の場合には，二回部分積分を行わなくてはならない．</p>
+<p>しかし！最近，瞬間部分積分，なるものを見つけました．すでに当たり前になっている手法かもしれませんが．<a href="https://manabitimes.jp/math/823" target="_blank">こちら</a>，を参考にしました</p>
+<p>その条件は，</p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle  \int f(x) g(x) dx \)</span></p>
+<p>において，</p>
+<p class="Blue-Bold">　f(x)を何回か微分したら０になる．<br>
+　g(x)は積分可能</p>
+<p>な場合に成り立つようです．その手順とは，</p>
+<p class="Blue-Bold">　１．f(x)を微分して，定数となるまで続ける<br />
+　２．g(x)を積分していく<br />
+　３．&quot;+,-,+,-&quot;と符号をつける<br />
+　４．１．２．３の積を作る<br />
+　５．定数を加える</p>
+<p>です．</p>
+<p>&nbsp;</p>
+<p class="Red-Large">・簡単な例1-1</p>
+<p>\( \Large     \displaystyle  \int x \ e^x dx \)</p>
+<p>を考えていきます．真っ当に解くと，</p>
+<p>\( \Large     \displaystyle  (fg)' = f'g + fg' \)</p>
+<p>\( \Large     \displaystyle   f'g = (fg)' - fg' \)</p>
+<p>\( \Large     \displaystyle   \int f'g \ dx= \int (fg)' \ dx- \int fg' \ dx = fg - \int fg' \ dx\)</p>
+<p>となるので，</p>
+<p>\( \Large \displaystyle f' = e^x, \ g =x \)</p>
+<p>とすれば，</p>
+<p>\( \Large \displaystyle f = e^x, \ g' =1 \)</p>
+<p>となるので，</p>
+<p>\( \Large     \displaystyle  \int x \ e^x dx = e^x x - \int e^x \ dx = x e^x - e^x + C  \)</p>
+<p>です．瞬間部分積分を使えば，</p>
+<table width="336" border="1">
+  <tbody>
+    <tr>
+      <td width="39" style="text-align: center">&nbsp;</td>
+      <td width="65" style="text-align: center">微分回数</td>
+      <td width="24" style="text-align: center">&nbsp;</td>
+      <td width="83" style="text-align: center">積分回数</td>
+      <td width="91" style="text-align: center">&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">+</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">x</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">e<sup>x</sup></td>
+    </tr>
+    <tr>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">2</td>
+      <td style="text-align: center">e<sup>x</sup></td>
+    </tr>
+  </tbody>
+</table>
+<p>\( \Large     \displaystyle  \int x \ e^x dx =  x e^x - e^x + C  \)</p>
+<p class="Red-Large">・簡単な例1-2</p>
+<p>\( \Large     \displaystyle  \int x \ e^{ax} dx \)</p>
+<table width="336" border="1">
+  <tbody>
+    <tr>
+      <td width="39" style="text-align: center">&nbsp;</td>
+      <td width="65" style="text-align: center">微分回数</td>
+      <td width="24" style="text-align: center">&nbsp;</td>
+      <td width="83" style="text-align: center">積分回数</td>
+      <td width="91" style="text-align: center">&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">+</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">x</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">\( \Large\frac{1}{a} e^{ax} \)</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">2</td>
+      <td style="text-align: center">\( \Large\frac{1}{a^2} e^{ax} \)</td>
+    </tr>
+  </tbody>
+</table>
+<p>\( \Large     \displaystyle  \int x \ e^{ax} dx = \frac{1}{a} x \ e^{ax} -  \frac{1}{a^2} e^{ax} + C\)</p>
+<p>&nbsp;</p>
+<p class="Red-Large">・簡単な例2-1</p>
+<p>\( \Large     \displaystyle  \int x^2 \ e^x dx \)</p>
+<table width="342" border="1">
+  <tbody>
+    <tr>
+      <td width="11" style="text-align: center">&nbsp;</td>
+      <td width="85" style="text-align: center">微分回数</td>
+      <td width="27" style="text-align: center">&nbsp;</td>
+      <td width="95" style="text-align: center">積分回数</td>
+      <td width="90" style="text-align: center">&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">+</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">x<sup>2</sup></td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">e<sup>x</sup></td>
+    </tr>
+    <tr>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">2x</td>
+      <td style="text-align: center">2</td>
+      <td style="text-align: center">e<sup>x</sup></td>
+    </tr>
+    <tr>
+      <td style="text-align: center">+</td>
+      <td style="text-align: center">2</td>
+      <td style="text-align: center">2</td>
+      <td style="text-align: center">3</td>
+      <td style="text-align: center">e<sup>x</sup></td>
+    </tr>
+  </tbody>
+</table>
+<p>\( \Large     \displaystyle  \int x^2 \ e^x dx =  x^2 e^x -2x e^x + 2 e^x + C  \)</p>
+<p>&nbsp;</p>
+<p class="Red-Large">・簡単な例2-2</p>
+<p>\( \Large     \displaystyle  \int x^2 \ e^{ax} dx \)</p>
+<table width="342" border="1">
+  <tbody>
+    <tr>
+      <td width="11" style="text-align: center">&nbsp;</td>
+      <td width="85" style="text-align: center">微分回数</td>
+      <td width="27" style="text-align: center">&nbsp;</td>
+      <td width="95" style="text-align: center">積分回数</td>
+      <td width="90" style="text-align: center">&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">+</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">x<sup>2</sup></td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">\( \Large\frac{1}{a} e^{ax} \)</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">2x</td>
+      <td style="text-align: center">2</td>
+      <td style="text-align: center">\( \Large\frac{1}{a^2} e^{ax} \)</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">+</td>
+      <td style="text-align: center">2</td>
+      <td style="text-align: center">2</td>
+      <td style="text-align: center">3</td>
+      <td style="text-align: center">\( \Large\frac{1}{a^3} e^{ax} \)</td>
+    </tr>
+  </tbody>
+</table>
+<p>\( \Large     \displaystyle  \int x^2 \ e^x dx =  \frac{1}{a} x^2 e^x -\frac{2}{a^2}x e^x + \frac{2}{a^3} e^x + C  \)</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p class="Red-Large">・簡単な例3-1_三角関数を含む場合</p>
+<p>\( \Large     \displaystyle  \int x \ sin \ x \ dx \)</p>
+<table width="356" border="1">
+  <tbody>
+    <tr>
+      <td width="11" style="text-align: center">&nbsp;</td>
+      <td width="76" style="text-align: center">微分回数</td>
+      <td width="36" style="text-align: center">&nbsp;</td>
+      <td width="89" style="text-align: center">積分回数</td>
+      <td width="110" style="text-align: center">&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">+</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">x</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">cos x<sup></sup></td>
+    </tr>
+    <tr>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">2</td>
+      <td style="text-align: center">-sin x</td>
+    </tr>
+  </tbody>
+</table>
+<p>\( \Large     \displaystyle  \int x \ sin \ x \ dx =  x \ cos \ x +  sin \ x + C\)</p>
+<p>&nbsp;</p>
+<p class="Red-Large">・簡単な例3-2_三角関数を含む場合</p>
+<p>\( \Large     \displaystyle  \int x \ sin \ ax \ dx \)</p>
+<table width="356" border="1">
+  <tbody>
+    <tr>
+      <td width="11" style="text-align: center">&nbsp;</td>
+      <td width="76" style="text-align: center">微分回数</td>
+      <td width="36" style="text-align: center">&nbsp;</td>
+      <td width="89" style="text-align: center">積分回数</td>
+      <td width="110" style="text-align: center">&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">+</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">x</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">\( \Large -\frac{1}{a} cos \ ax \)<sup></sup></td>
+    </tr>
+    <tr>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">2</td>
+      <td style="text-align: center">\( \Large \frac{1}{a^2} sin \ ax \)<sup></sup></td>
+    </tr>
+  </tbody>
+</table>
+<p>\( \Large     \displaystyle  \int x \ sin \ ax \ dx =  - \frac{1}{a} x \ cos \ x -  \frac{1}{a^2}sin \ x + C\)</p>
+<p>&nbsp;</p>
+<p class="Red-Large">・簡単な例3-3_三角関数を含む場合</p>
+<p>\( \Large     \displaystyle  \int x \ cos \ x \ dx \)</p>
+<table width="356" border="1">
+  <tbody>
+    <tr>
+      <td width="11" style="text-align: center">&nbsp;</td>
+      <td width="76" style="text-align: center">微分回数</td>
+      <td width="36" style="text-align: center">&nbsp;</td>
+      <td width="89" style="text-align: center">積分回数</td>
+      <td width="110" style="text-align: center">&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">+</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">x</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">sin x<sup></sup></td>
+    </tr>
+    <tr>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">2</td>
+      <td style="text-align: center">-cos x</td>
+    </tr>
+  </tbody>
+</table>
+<p>\( \Large     \displaystyle  \int x \ sin \ x \ dx =  x \ sin \ x +  cos \ x + C\)</p>
+<p>&nbsp;</p>
+<p class="Red-Large">・簡単な例3-4_三角関数を含む場合</p>
+<p>\( \Large     \displaystyle  \int x \ cos \ ax \ dx \)</p>
+<table width="356" border="1">
+  <tbody>
+    <tr>
+      <td width="11" style="text-align: center">&nbsp;</td>
+      <td width="76" style="text-align: center">微分回数</td>
+      <td width="36" style="text-align: center">&nbsp;</td>
+      <td width="89" style="text-align: center">積分回数</td>
+      <td width="110" style="text-align: center">&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">+</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">x</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">\( \Large \frac{1}{a} sin \ ax \)<sup></sup></td>
+    </tr>
+    <tr>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">2</td>
+      <td style="text-align: center">\( \Large -\frac{1}{a^2} cos \ ax \)<sup></sup></td>
+    </tr>
+  </tbody>
+</table>
+<p>\( \Large     \displaystyle  \int x \ sin \ ax \ dx =   \frac{1}{a} x \ sin \ x +  \frac{1}{a^2}cos \ x + C\)</p>
+<p>&nbsp;</p>
+<p><span class="Red-Large">・簡単な例3-5_三角関数を含む場合</span></p>
+<p>\( \Large     \displaystyle  \int x^2 \ cos \ x \ dx \)</p>
+<table width="356" border="1">
+  <tbody>
+    <tr>
+      <td width="11" style="text-align: center">&nbsp;</td>
+      <td width="76" style="text-align: center">微分回数</td>
+      <td width="36" style="text-align: center">&nbsp;</td>
+      <td width="89" style="text-align: center">積分回数</td>
+      <td width="110" style="text-align: center">&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">+</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">x<sup>2</sup></td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">sin x<sup></sup></td>
+    </tr>
+    <tr>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">2x</td>
+      <td style="text-align: center">2</td>
+      <td style="text-align: center">-cos x</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">+</td>
+      <td style="text-align: center">2</td>
+      <td style="text-align: center">2</td>
+      <td style="text-align: center">3</td>
+      <td style="text-align: center">-sin x</td>
+    </tr>
+  </tbody>
+</table>
+<p>\( \Large     \displaystyle  \int x^2 \ cos \ x \ dx =  x^2 sin \ x-2x \ cos \ x - 2 sin \ x + C  =(x^2 - 2) sin \ x -2x \ cos \ x + C\)</p>
+<p>&nbsp;</p>
+<p>次に，瞬間部分積分の証明を行っていきます．</p>
+<p>&nbsp;</p>
+<p><span class="style7"><a href="index.html"><img src="TOP.png" alt="t" width="57" height="34" /></a></span><a href="Integration by parts-02.html"><img src="R-arrow.png" alt="r" width="57" height="34" /></a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>
