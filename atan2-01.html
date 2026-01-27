@@ -1,0 +1,185 @@
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ['\\(','\\)'] ],
+    processEscapes: true
+  },
+  TeX: {
+    extensions: ["mhchem.js"]
+  },
+  CommonHTML: {
+    matchFontHeight: false
+  }
+});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+
+
+	
+
+
+
+<link href="160324.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+<title>atan2</title>
+</head>
+
+<body>
+<p class="X-Large-Bold-RED">atan2，の不思議</p>
+<p>アークタンジェント，一般的に使われる関数ですが，適応範囲が決まっています．</p>
+<p>\( \Large  \displaystyle   \frac{- \pi}{2} \ \sim \ \theta \ \sim    \ \frac{ \pi}{2}\)</p>
+<p>つまり，ー９０度から９０度の範囲です．</p>
+<p>θ＝30, 150, 210, 330度，で考えてみると，</p>
+<p><img src="atan-01.png" width="598" height="529" alt=""/></p>
+<table width="600" border="1">
+  <tbody>
+    <tr>
+      <td width="96" style="text-align: right"><p>θ(degree)</p></td>
+      <td width="96" style="text-align: right"><p>θ(radian)</p></td>
+      <td width="96" style="text-align: right">\(   \Large  x : 2 \ cos \ \theta  \)</td>
+      <td width="96" style="text-align: right">\(   \Large  y : 2 \ sin \ \theta  \)</td>
+      <td width="84" style="text-align: right">atan(rad)</td>
+      <td width="92" style="text-align: right">atan(degree)</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">30</td>
+      <td style="text-align: right">0.5236</td>
+      <td style="text-align: right">\(   \sqrt{3}\)</td>
+      <td style="text-align: right">1</td>
+      <td style="text-align: right">0.5236</td>
+      <td style="text-align: right">30</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">150</td>
+      <td style="text-align: right">2.618</td>
+      <td style="text-align: right">\(   -\sqrt{3}\)</td>
+      <td style="text-align: right">1</td>
+      <td style="text-align: right">-0.5236</td>
+      <td style="text-align: right">-30</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">210</td>
+      <td style="text-align: right">3.665</td>
+      <td style="text-align: right">\(   -\sqrt{3}\)</td>
+      <td style="text-align: right">-1</td>
+      <td style="text-align: right">0.5236</td>
+      <td style="text-align: right">30</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">330</td>
+      <td style="text-align: right">5.760</td>
+      <td style="text-align: right">\(   \sqrt{3}\)</td>
+      <td style="text-align: right">-1</td>
+      <td style="text-align: right">-0.5236</td>
+      <td style="text-align: right">-30</td>
+    </tr>
+  </tbody>
+</table>
+<p>この計算からわかるように，０～３６０度の計算においても，ー９０度から９０度の範囲で表示します．</p>
+<p>&nbsp;</p>
+<p>そこで，登場？したのが，<span class="Large-Bold-Red">atan2</span>，です．</p>
+<p>これは，ｘ，ｙの値を指定することで，０～３６０度を計算してくれます（ラジアンですが）</p>
+<table width="800" border="1">
+  <tbody>
+    <tr>
+      <td width="96" style="text-align: right"><p>θ(degree)</p></td>
+      <td width="96" style="text-align: right"><p>θ(radian)</p></td>
+      <td width="96" style="text-align: right">\(   \Large  x : 2 \ cos \ \theta  \)</td>
+      <td width="96" style="text-align: right">\(   \Large  y : 2 \ sin \ \theta  \)</td>
+      <td width="84" style="text-align: right">atan(rad)</td>
+      <td width="92" style="text-align: right">atan(degree)</td>
+      <td width="92" style="text-align: right">atan2(y,x)</td>
+      <td width="96" style="text-align: right"><p>θ(degree)</p></td>
+    </tr>
+    <tr>
+      <td style="text-align: right">30</td>
+      <td style="text-align: right">0.5236</td>
+      <td style="text-align: right">\(   \sqrt{3}\)</td>
+      <td style="text-align: right">1</td>
+      <td style="text-align: right">0.5236</td>
+      <td style="text-align: right">30</td>
+      <td style="text-align: right">0.5236</td>
+      <td style="text-align: right">30</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">150</td>
+      <td style="text-align: right">2.618</td>
+      <td style="text-align: right">\(   -\sqrt{3}\)</td>
+      <td style="text-align: right">1</td>
+      <td style="text-align: right">-0.5236</td>
+      <td style="text-align: right">-30</td>
+      <td style="text-align: right">2.618</td>
+      <td style="text-align: right">150</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">210</td>
+      <td style="text-align: right">3.665</td>
+      <td style="text-align: right">\(   -\sqrt{3}\)</td>
+      <td style="text-align: right">-1</td>
+      <td style="text-align: right">0.5236</td>
+      <td style="text-align: right">30</td>
+      <td style="text-align: right">-2.618</td>
+      <td style="text-align: right">-150</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">330</td>
+      <td style="text-align: right">5.760</td>
+      <td style="text-align: right">\(   \sqrt{3}\)</td>
+      <td style="text-align: right">-1</td>
+      <td style="text-align: right">-0.5236</td>
+      <td style="text-align: right">-30</td>
+      <td style="text-align: right">-0.5236</td>
+      <td style="text-align: right">-30</td>
+    </tr>
+  </tbody>
+</table>
+<p>第３，４象限は，マイナスの値となるので，実際には，０～３６０度，ではなく，－１８０～１８０度，ですが，まあそれほど問題ではないでしょう．</p>
+<p>&nbsp;</p>
+<p><span class="Large-Bold-Blue">問題なのは．．．．．</span>上の表では，</p>
+<p><span style="text-align: right">atan2(y,x)</span></p>
+<p>と記したのですが，ソフトウェアによっては，異なる場合があるのです．．．．</p>
+<p class="Large-Bold-Blue">atan2<span class="X-Large-Bold-Blue">(x,y)</span>　：　エクセル，GoogleSheets, Numbers, Kyplot</p>
+<p class="Large-Bold-Blue">atan2<span class="X-Large-Bold-Blue">(y,x)</span>　：　Python, R, Labview</p>
+<p>などです．エクセル互換性のあるソフトは，エクセルに準じているようです．</p>
+<p>&nbsp;</p>
+<p><span class="Large-Bold-Red">R</span>においては，</p>
+<p class="Blue">x=sqrt(3)<br>
+  y=1<br>
+atan2(y,x)<br>
+atan2(x,y)</p>
+<p>で，</p>
+<p class="Red">&gt; atan2(y,x) [1] 0.5235988<br>
+&gt; atan2(x,y) [1] 1.047198</p>
+<p>となり，ｙ，ｘ，の順番であることがわかります．</p>
+<p>&nbsp;</p>
+<p><span class="Large-Bold-Red">Python(Google Colab)</span>においては，</p>
+<p class="Blue">import math <br>
+x=math.sqrt(3) <br>
+y=1 <br>
+xy=math.atan2(x,y) <br>
+yx=math.atan2(y,x) <br>
+print(yx) <br>
+print(xy)</p>
+<p>で，</p>
+<p class="Red">0.5235987755982989 <br>
+1.0471975511965976</p>
+<p>となり，ｙ，ｘ，の順番であることがわかります．</p>
+<p>&nbsp;</p>
+<p>なぜこんな混乱があるかは，よく知りませんが，それぞれのソフトに適した使い方をしていかなくてはならないですね．</p>
+<p>Copilot，に聞いてみると，</p>
+<p class="Blue-Bold">atan2(x,y)　：　ベクトル (x, y) をそのまま渡したい文化</p>
+<p class="Blue-Bold">atan2(y,x)　：　数学の y/x に従った標準的定義</p>
+<p>さらには，<span class="Blue-Bold">古いFORTRAN</span>，等による歴史的理由があるようです．</p>
+<p>使う方から考えると，統一してもらいたいところです．</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span class="style7"><a href="index.html"><img src="TOP.png" alt="t" width="57" height="34" /></a></span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

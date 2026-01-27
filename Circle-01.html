@@ -1,0 +1,86 @@
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ['\\(','\\)'] ],
+    processEscapes: true
+  },
+  TeX: {
+    extensions: ["mhchem.js"]
+  },
+  CommonHTML: {
+    matchFontHeight: false
+  }
+});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+
+
+	
+
+
+
+<link href="160324.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+<title>CIrcle</title>
+</head>
+
+<body>
+<p class="X-Large-Bold-RED">円周・円の面積の求め方，楕円の面積の求め方</p>
+<p>&nbsp;</p>
+<p>円の円周，面積を考えていきます．</p>
+<p>&nbsp;</p>
+<p class="Large-Bold-Red">・円周</p>
+<p>まずは<span class="Blue-Bold">円周，2πｒ</span>，から．</p>
+<p><img src="Circle-01.png" width="506" height="427" alt=""/></p>
+<p>半径ｒの円を考えていきます．ここでは簡単に<span class="Blue-Bold">1/4円</span>を考えていきます．このL<sub>1/4</sub>を求めていきます．</p>
+<p>図のような二等辺三角形，頂角がθ，側辺の長さがｒ，を考えていきます．</p>
+<p>この二等辺三角形は，直角三角形が二つ合わさったものであるので，底辺の長さLは，</p>
+<p>\( \Large           \displaystyle      L_{ \theta}=2 \cdot  r \cdot sin \frac{ \theta}{2} = 2 \cdot r \cdot sin \frac{ \theta}{2} \)</p>
+<p>1/4円にこの三角形が，</p>
+<p>\( \Large           \displaystyle      \frac{ \pi / 2}{ \theta}  \)</p>
+<p>個あるので，</p>
+<p>\( \Large           \displaystyle      L_{ 1/4}= 2 \cdot r \cdot sin \frac{ \theta}{2} \cdot \frac{ \pi / 2}{ \theta} \)</p>
+<p>このθをどんどん小さくしていった結果が円周となるので，</p>
+<p>\( \Large           \displaystyle      L_{ 1/4}=  \lim_{ \theta \to 0 } \left[ 2 \cdot r \cdot sin \frac{ \theta}{2} \cdot \frac{ \pi / 2}{ \theta} \right]\)</p>
+<p>を計算すればいいことになります．ここで，θ/2=ｘ．とすると極限は変わらないので，</p>
+<p>\( \Large           \displaystyle      L_{ 1/4}=  \lim_{ x \to 0 } \left[ 2 \cdot r \cdot sin \ x \cdot \frac{ \pi / 2}{ 2x} \right]<br>
+  =
+\lim_{ x \to 0 } \left[ \frac{ \pi r}{2} \cdot \frac{sin \ x}{ x} \right] <br>
+=
+\frac{ \pi r}{2} \lim_{ x \to 0 }  \frac{sin \ x}{ x}  \)</p>
+<p>この極限は，<a href="sin_x devide x.html">ここ</a>，で記したように，１，となるので，</p>
+<p>\( \Large           \displaystyle      L_{ 1/4}=
+\frac{ \pi r}{2}   \)</p>
+<p>\( \Large           \displaystyle      L=2 \pi r   \)</p>
+<p>と公式を導き出すことができました．</p>
+<p>&nbsp;</p>
+<p><span class="Large-Bold-Red">・円の面積</span></p>
+<p>同様の考え方で，図の二等辺三角形の面積は，</p>
+<p>\( \Large           \displaystyle      S_{ \theta}=\frac{1}{2} \cdot 2 \cdot  r \cdot cos \frac{ \theta}{2} \cdot r \cdot sin \frac{ \theta}{2} =   r^2 \cdot cos \frac{ \theta}{2} \cdot sin \frac{ \theta}{2} \)</p>
+<p>1/4円にこの三角形が，</p>
+<p>\( \Large           \displaystyle      \frac{ \pi / 2}{ \theta}  \)</p>
+<p>個あるので，</p>
+<p>\( \Large           \displaystyle      S_{ 1/4}= r^2 \cdot cos \frac{ \theta}{2} \cdot sin \frac{ \theta}{2} \cdot \frac{ \pi / 2}{ \theta}  \)</p>
+<p>このθをどんどん小さくしていった結果が円周となるので，</p>
+<p>\( \Large           \displaystyle      S_{ 1/4}=  \lim_{ \theta \to 0 } \left[  r^2 \cdot cos \frac{ \theta}{2} \cdot sin \frac{ \theta}{2} \cdot \frac{ \pi / 2}{ \theta} \right]\)</p>
+<p>を計算すればいいことになります．ここで，θ/2=ｘ．とすると極限は変わらないので，</p>
+<p>\( \Large           \displaystyle      S_{ 1/4}=  \lim_{ x \to 0 } \left[ r^2 \cdot \frac{cos \ x \cdot sin \ x}{x} \cdot \frac{ \pi}{ 4} \right]  \)</p>
+<p>\( \Large           \displaystyle=  \frac{ \pi r^2}{ 4} \lim_{ x \to 0 } \left[  \frac{cos \ x \cdot sin \ x}{x}  \right]  \)</p>
+<p>\( \Large           \displaystyle=  \frac{ \pi r^2}{ 4} \lim_{ x \to 0 } cos \ x \  \lim_{ x \to 0 } \frac{sin \ x}{x}    \)</p>
+<p>cos xの極限は１となり，次の極限は，<a href="sin_x devide x.html">ここ</a>，で記したように，１，となるので，</p>
+<p>\( \Large           \displaystyle      S_{ 1/4}=
+  \frac{ \pi r^2}{4}   \)</p>
+<p>\( \Large           \displaystyle      S=\pi r^2   \)</p>
+<p>と公式を導き出すことができました．</p>
+<p>&nbsp;</p>
+<p>次ページに，別の方法の解説をします．</p>
+<p><span class="style7"><a href="index.html"><img src="TOP.png" alt="t" width="57" height="34" /></a></span><a href="Circle-02.html"><img src="R-arrow.png" alt="r" width="57" height="34" /></a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

@@ -1,0 +1,72 @@
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ['\\(','\\)'] ],
+    processEscapes: true
+  },
+  TeX: {
+    extensions: ["mhchem.js"]
+  },
+  CommonHTML: {
+    matchFontHeight: false
+  }
+});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+
+
+	
+
+
+
+<link href="160324.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+<title>Diagonally cut</title>
+</head>
+
+
+
+<body>
+<h1 class="X-Large-Bold-RED">立体を斜めに切断した場合の体積</h1>
+<p>&nbsp;</p>
+<p class="Large-Bold-Red">・直方体</p>
+<p>次は直方体を斜めに切断した場合の体積です．</p>
+<p><span class="Blue-Bold">底面積をS</span>，直方体なので，底面は長方形となり，<span class="Blue-Bold">それぞれの長さをｗ，ｄ</span>，とします．</p>
+<p><img src="Diagonally cut-09.png" width="485" height="480" alt=""/></p>
+<p>直方体の縦４辺を横切る断面なので，<span class="Blue-Bold">a, b, c, d</span>の4点が存在することになりますが，どんな点をとってもいいわけではなく，</p>
+<p><span class="Red-Bold">平面にするためには3点を決めると残りの点の高さが決まります</span>．</p>
+<p><img src="Diagonally cut-10.png" width="564" height="451" alt=""/></p>
+<p>a, b, c,それぞれに底面と平行な補助線を引くと，それぞれの三角形の合同から，</p>
+<p>\( \Large           \displaystyle d =   b-a+c = c-a+b \)</p>
+<p>\( \Large           \displaystyle a + d =   b + c  \)</p>
+<p>が成り立つことがポイントとなります．</p>
+<p>&nbsp;</p>
+<p>三角柱の場合のように，どのように分割して体積を求めようかな？と考えていたのですが，ふと．．</p>
+<p class="Red-Bold">　直方体をに分割したら二つの三角柱になるのでは？</p>
+<p>と気づきました．</p>
+<p><img src="Diagonally cut-11.png" width="501" height="496" alt=""/></p>
+<p>赤面が断面です．<span class="Large-Bold-Red">底面が長方形なので，それぞれの底面積は等しくなり，S/2</span>，となります（これがポイント）</p>
+<p>それぞれの三角柱の体積は，</p>
+<p>\( \Large           \displaystyle V = V_1 + V_2 = \frac{a+b+d}{3} \frac{S}{2} + \frac{a+c+d}{3} \frac{S}{2}  \)</p>
+<p>\( \Large           \displaystyle = \frac{2a+b+c+2d}{6} S  \)</p>
+<p>\( \Large           \displaystyle = \frac{3a+3d}{6} S  \)</p>
+<p>\( \Large           \displaystyle = \frac{a+d}{2} S  \)</p>
+<p>\( \Large           \displaystyle = \frac{(a+d)+(a+d)}{4} S  \)</p>
+<p>\( \Large           \displaystyle = \frac{a+b+c+d}{4} S  \)</p>
+<p>この計算のポイントは，</p>
+<p class="Red-Bold">　分割した底面積が等しい</p>
+<p>点にあります．つまり，</p>
+<p class="Red-Bold">　立方体，直方体，さらには，平行四辺形，ひし形，のみ成り立つ公式</p>
+<p class="Red-Bold">&nbsp;</p>
+<p>と言えます．ちなみに，<span class="Blue-Bold"><a href="Diagonally cut-05.html">台形</a></span><a href="Diagonally cut-05.html">で同様の計算</a>を試みたところ，結構複雑な計算式となってしまいました．</p>
+<p>&nbsp;</p>
+<p>次は，正多角形を底面に持つ立体です．これは，自分自身の計算では成り立ちましたが，ネットを見てもそのような記述が見当たらず，本当に正しいかはちょっと不安です．</p>
+<p>&nbsp;</p>
+<p><span class="style13"><a href="Diagonally cut-02.html"><img src="L-arrow.png" alt="l" width="57" height="34" /></a> <a href="index.html"><img src="TOP.png" alt="t" width="57" height="34" /></a> <a href="Diagonally cut-04.html"><img src="R-arrow.png" alt="r" width="57" height="34" /></a></span></p>
+</body>
+</html>

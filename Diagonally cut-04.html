@@ -1,0 +1,68 @@
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ['\\(','\\)'] ],
+    processEscapes: true
+  },
+  TeX: {
+    extensions: ["mhchem.js"]
+  },
+  CommonHTML: {
+    matchFontHeight: false
+  }
+});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+
+
+	
+
+
+
+<link href="160324.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+<title>Diagonally cut</title>
+</head>
+
+
+
+<body>
+<h1 class="X-Large-Bold-RED">立体を斜めに切断した場合の体積</h1>
+<p>直方体，立方体，底面が平行四辺形，ひし形の際に成り立つ公式の導出を行いました．</p>
+<p>ポイントは，</p>
+<p class="Red-Bold">　底面積を三角形で分割，さらには分割した三角形の面積が等しい</p>
+<p>場合に，成り立つ公式でした．</p>
+<p>ならば，そのような条件を満たす底面の形状はほかにはないかを検討しました．</p>
+<p>&nbsp;</p>
+<p class="Large-Bold-Red">・正多角形（正六面体）</p>
+<p>正六面体を底面に持つ立体（とりあえず，90度でそびえたつ）を斜めに切断した場合の体積です．</p>
+<p><img src="Diagonally cut-12.png" width="396" height="513" alt=""/></p>
+<p>正六面体を取り上げたのは，できるだけシンプルで見やすいからです（正五面体でも構わないかと）</p>
+<p>断面と側面との交点を，a, b, c, d, e, f，とします．</p>
+<p><span class="Red-Bold">底面積をS，として，中心点から分割すると，6つの同じ面積を持つ三角形</span>が出来上がります．</p>
+<p>この断面は平面ですが，直方体と異なるのは，</p>
+<p class="Blue-Bold">　立体の内側にそれぞれの三角柱の断面の交点，ｇ，が出現する</p>
+<p>ことです．ただ，</p>
+<p>\( \Large           \displaystyle g =   \frac{a+b+c+f+e+f}{6} \)</p>
+<p>の関係があります．<span class="Red">各交点の高さの平均</span>となるわけですね．</p>
+<p>&nbsp;</p>
+<p>それぞれの三角柱の体積から，</p>
+<p>\( \Large           \displaystyle V = V_1 + V_2 + V_3 + V_4 + V_5 + V_6  \)<br>
+\( \Large           \displaystyle= \frac{a+b+g}{3} \frac{S}{6} + \frac{b+c+g}{3} \frac{S}{6}  + \frac{c+d+g}{3} \frac{S}{6}+ \frac{d+e+g}{3} \frac{S}{6}<br>
++ \frac{e+f+g}{3} \frac{S}{6} + \frac{f+a+g}{3} \frac{S}{6}\)</p>
+<p>\( \Large           \displaystyle= \frac{S}{18} [2a + 2b+ 2c+ 2d + 2e + 2f + 6g]\) </p>
+<p>\( \Large           \displaystyle= \frac{S}{18} [3a + 3b+ 3c+ 3d + 3e + 3f ]\) </p>
+<p>\( \Large           \displaystyle= \frac{a+b+c+d+e+f}{6} S\) </p>
+<p>となり，同様の公式を導き出すことができました．</p>
+<p>本当にこの計算が正しいかは．．．ちょっと不安です．</p>
+<p>あまり，ネットなどで正多角形に関する記載はありませんが，もし正しければ，他の正五面体，正二十面体などの立体にも適用できそうです．</p>
+<p>次は台形を考えていきましょう</p>
+<p>&nbsp;</p>
+<p><span class="style13"><a href="Diagonally cut-03.html"><img src="L-arrow.png" alt="l" width="57" height="34" /></a> <a href="index.html"><img src="TOP.png" alt="t" width="57" height="34" /></a> <a href="Diagonally cut-05.html"><img src="R-arrow.png" alt="r" width="57" height="34" /></a></span></p>
+</body>
+</html>

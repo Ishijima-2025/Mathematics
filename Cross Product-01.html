@@ -1,0 +1,92 @@
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ['\\(','\\)'] ],
+    processEscapes: true
+  },
+  TeX: {
+    extensions: ["mhchem.js"]
+  },
+  CommonHTML: {
+    matchFontHeight: false
+  }
+});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>cross product</title>
+<link href="090413.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+</head>
+
+<body>
+<p class="X-Large-RED"><strong>外積-01 </strong></p>
+<p>&nbsp;</p>
+<p>外積，中高で習ったと思いますが，結構ややこしい計算でした．あまり実用的と感じたこともないですし．</p>
+<p>しかし，回転運動の解析における回転方向の算出にはとても便利な巻数です．</p>
+<p>&nbsp;</p>
+<p><span class="Large-Red">・外積とは，</span></p>
+<p>外積とは，</p>
+<p>　<span class="Large-Red">二つのベクトルが作る平行四辺形の面積</span></p>
+<p>ですね（ちゃんとした定義は違うかもしれませんが．．．）</p>
+<p><img src="cross-product-01.png" width="400" height="324" alt=""/></p>
+<p>ベクトルをそれぞれ，\( \Large      \vec{a}, \ \vec{b} \)，とし，二つのベクトルのなす角をθ，とすると，平行四辺形の面積，S，は，</p>
+<p class="Large-Red">\( \Large      S = |a| \ |b| \ sin \theta \)</p>
+<p>となります．</p>
+<p><img src="cross-product-02.png" width="400" height="399" alt=""/></p>
+	<p>原点からのベクトルを考え，それぞれの座標を，(x<sub>1</sub>,y<sub>1</sub>)，(x<sub>2</sub>,y<sub>2</sub>)とすると，外積は，</p>
+	<p class="Large-Red">\( \Large       S = |a| \ |b| \ sin \theta = x_1\ y_2-x_2 \ y_1 \)</p>
+	<p>となります．</p>
+	<p>これはよく見ると，</p>
+	<p><img src="cross-product-03.png" width="400" height="399" alt=""/></p>
+	<p>平行四辺形の面積は，</p>
+	<p class="Large-Blue">(0,0)，(x<sub>1</sub>,y<sub>1</sub>)，(x<sub>2</sub>,y<sub>2</sub>)の三角形の面積の2倍</p>
+	<p>となることがわかります．</p>
+	<p>&nbsp;</p>
+	<p>・三角形の面積の求め方</p>
+	<p><img src="cross-product-04.png" width="400" height="319" alt=""/></p>
+	<p>この三角形の面積は，上図の長方形から三つの三角形を引けばいいので，</p>
+	<p>\( \Large       S_1 = \frac{1}{2} x_1\ y_1 \)</p>
+	<p>\( \Large       S_2 = \frac{1}{2} x_2\ y_2 \)</p>
+	<p>\( \Large       S_3 = \frac{1}{2} (x_1-x_2)\ (y_2-y_1) \)</p>
+<p>となりますので，</p>
+	<p>\( \Large       \begin{eqnarray} S_{triangle} &amp;=&amp; x_1 \ y_2 -(S_1+       S_2+       S_3) \\<br />
+	  &amp;=&amp; 
+    x_1 \ y_2 -\frac{1}{2} [x_1\ y_1 + x_2\ y_2 + (x_1-x_2)\ (y_2-y_1) ] \\<br />
+    &amp;=&amp; 
+    x_1 \ y_2 -\frac{1}{2} [x_1\ y_1 + x_2\ y_2 + x_1 \ y_2 - x_1 \ y_1 - x_2 \ y_2 + x_2 \ y_1] \\<br />
+    &amp;=&amp; 
+    x_1 \ y_2 -\frac{1}{2} [ x_1 \ y_2  + x_2 \ y_1] \\<br />
+    &amp;=&amp; 
+    \frac{1}{2} [ x_1 \ y_2  - x_2 \ y_1] \\ <br />
+    \end{eqnarray} \)</p>
+<p>となるので，平行四辺形の面積は，</p>
+	<p class="Large-Red">\( \Large       S = 2 \ S_{triangle} =  x_1 \ y_2  - x_2 \ y_1 \)</p>
+<p>となりました．当初は，二つのベクトルからの垂線の式を計算して．．．と行っていたのですが，結構な計算量でした．調べていくと三角形の面積の式がよく似ていたので，簡単に導出することができました．</p>
+<p>&nbsp;</p>
+<p class="Large-Red">・外積の極性</p>
+<p>外積の値の正負から回転の方向を算出してみましょう．</p>
+<p><img src="cross-product-05.png" width="400" height="399" alt=""/></p>
+<p>それぞれのベクトルの角度は，</p>
+<p>\( \Large       \theta_1 = tan \frac{y_1}{x_1}, \ \theta_2 = tan \frac{y_2}{x_2}\)</p>
+<p>です．ここで，<span class="Large-Blue">θ<sub>2</sub>&gt;θ<sub>1</sub></span>とし，<span class="Blue">反時計回りを正の値</span>とすると，</p>
+<p>\( \Large       tan \frac{y_1}{x_1} &gt; tan \frac{y_2}{x_2}\)</p>
+<p>となります．tanの性質から，</p>
+<p>\( \Large        \frac{y_1}{x_1} &gt;  \frac{y_2}{x_2}\)</p>
+<p>\( \Large        x_1 \ y_2  - x_2 \ y_1 &gt; 0 \)</p>
+<p>となり，<span class="Large-Red">外積の値は正</span>となります．<span class="large-red">逆の場合は負の値</span>となります．</p>
+<p>&nbsp;</p>
+<p><span class="style7"><a href="index.html"> <img src="TOP.png" alt="t" width="57" height="34" /></a></span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

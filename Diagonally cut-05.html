@@ -1,0 +1,77 @@
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ['\\(','\\)'] ],
+    processEscapes: true
+  },
+  TeX: {
+    extensions: ["mhchem.js"]
+  },
+  CommonHTML: {
+    matchFontHeight: false
+  }
+});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+
+
+	
+
+
+
+<link href="160324.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+<title>Diagonally cut</title>
+</head>
+
+
+
+<body>
+<h1 class="X-Large-Bold-RED">立体を斜めに切断した場合の体積</h1>
+<p>直方体，立方体，底面が平行四辺形，ひし形の際に成り立つ公式の導出を行いました．</p>
+<p>ポイントは，</p>
+<p class="Red-Bold">　底面積を三角形で分割，さらには分割した三角形の面積が等しい</p>
+<p>場合に，成り立つ公式でした．</p>
+<p>さらには，正多面体を底面積に持つ立体も適用できそうです．</p>
+<p>なので，<span class="Blue-Bold">台形，を底面に持つ立体は適用できない</span>，ことになります．</p>
+<p>しかし，全くお手上げなのでしょうか？</p>
+<p>&nbsp;</p>
+<p class="Large-Bold-Red">・台形</p>
+<p>台形を底面に持つ立体（とりあえず，90度でそびえたつ）を斜めに切断した場合の体積です．</p>
+<p><img src="Diagonally-cut-13.png" width="537" height="550" alt=""/></p>
+<p>底面の台形は，<br>
+　面積　：　S<br>
+　上辺　：　U<br>
+　底辺　：　D<br>
+　高さ　：　ｈ<br>
+　上辺と底辺は平行<br>
+とし，a, b, c, d,　が断面となります．</p>
+<p>この4点も独立ではなく，3点決まると残りの1点が決まります．補助線を加えると，</p>
+<p><img src="Diagonally-cut-14.png" width="585" height="498" alt=""/></p>
+<p>となります．上辺と底辺の断面線は平行となりますが，そこからできる三角形は相似でありますが，合同ではありません</p>
+<p>そこで，ｄとｂの差分を考えると，</p>
+<p>\( \Large           \displaystyle d - b=   \frac{c-a}{U} \cdot D \)</p>
+<p>となります．</p>
+<p>&nbsp;</p>
+<p>直方体と同様に，三角柱に切り分けていきます．</p>
+<p><img src="Diagonally-cut-15.png" width="609" height="520" alt=""/></p>
+<p>各底面積を，S<sub>1</sub>, S<sub>2</sub>, とすると，</p>
+<p>\( \Large           \displaystyle S =   S_1 + S_2 = \frac{U + D}{2} h\)</p>
+<p>\( \Large           \displaystyle    S_1  = \frac{U }{2} h\)</p>
+<p>\( \Large           \displaystyle    S_2  = \frac{D }{2} h\)</p>
+<p>となりますので，</p>
+<p>\( \Large           \displaystyle    V_1  = S_1 \frac{a+c+d}{3} \)</p>
+<p>\( \Large           \displaystyle    V_2  = S_2 \frac{a+b+d}{3} \)</p>
+<p>\( \Large           \displaystyle V =  V_1 + V_2 = S_1 \frac{a+c+d}{3} +S_2 \frac{a+b+d}{3}\)</p>
+<p>\( \Large           \displaystyle= \frac{U }{2} h \frac{a+c+d}{3} +\frac{D }{2} h \frac{a+b+d}{3}\)</p>
+<p>\( \Large           \displaystyle= \frac{h }{6} [ U(a+c+d) + D (a+b+d)] \)</p>
+<p>とあまりきれいな形とは言えませんが，計算式を導出することができました．</p>
+<p>&nbsp;</p>
+<p><span class="style13"><a href="Diagonally cut-04.html"><img src="L-arrow.png" alt="l" width="57" height="34" /></a> <a href="index.html"><img src="TOP.png" alt="t" width="57" height="34" /></a></span></p>
+</body>
+</html>
