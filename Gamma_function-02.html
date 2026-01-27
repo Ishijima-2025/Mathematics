@@ -1,0 +1,56 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>Gamma_function</title>
+
+<script type="text/javascript"
+
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+
+</script>
+
+
+<link href="160324.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+
+</head>
+
+
+
+<body>
+
+<h1 class="style1"><span class="X-Large-Bold-Blue">ガンマ関数-02</span></h1>
+<h1 class="Large-Bold-Red">&nbsp;</h1>
+<h1 class="Large-Bold-Red">・+１/2の場合</h1>
+<p>\(\Large    \displaystyle   \Gamma\left( \frac{1}{2} \right) = \int_0^{\infty} t^{\frac{1}{2}-1} \ e^{-t} dt \)</p>
+<p>\(\Large     \displaystyle   = \int_0^{\infty} t^{-\frac{1}{2}} \ e^{-t} dt \)</p>
+<p>ここで，</p>
+<p>\(\Large     \displaystyle   t \equiv u^2 \)</p>
+<p>とおくと，</p>
+<p>\(\Large     \displaystyle   dt = 2u \ du \)</p>
+<p>積分範囲は変わらないので，</p>
+<p>\(\Large     \displaystyle    \int_0^{\infty} t^{-\frac{1}{2}} \ e^{-t} dt =  \int_0^{\infty} u^{-1} \ e^{-u^2} \ u \ dt\)</p>
+<p>\(\Large     \displaystyle    =  \int_0^{\infty}  e^{-u^2}  \ dt\)</p>
+<p>これは<a href="Gaussian-integral-01.html">ガウス積分</a>，になるので，</p>
+<p>\(\Large     \displaystyle    =  \sqrt{ \pi} \)</p>
+<p>つまり，</p>
+<p>\(\Large    \displaystyle   \Gamma\left( \frac{1}{2} \right) = \sqrt{ \pi} \)</p>
+<p>となります．</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<p><span class="style10"><a href="Interval Estimation-07.html"><img src="L-arrow.png" alt="l" width="57" height="34" /></a> <a href="index.html"><img src="TOP.png" alt="t" width="57" height="34" /></a> <a href="Interval Estimation-08_01.html"><img src="R-arrow.png" alt="r" width="57" height="34" /></a></span></p>
+
+</body>
+
+</html>
+

@@ -1,0 +1,106 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>Gamma_function</title>
+
+<script type="text/javascript"
+
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+
+</script>
+
+
+<link href="160324.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+
+</head>
+
+
+
+<body>
+
+<h1 class="style1"><span class="X-Large-Bold-Blue">ガンマ関数-01</span></h1>
+<h1 class="Large-Bold-Red">ガンマ関数とは</h1>
+<p>ガンマ関数，統計，検定などで頻繁に出てくるようになってきました．ですので，その性質についてまとめてみましょう．</p>
+<p><a href="https://manabitimes.jp/math/960" target="_blank">こちら</a>，のサイトを参考にさせていただきました．</p>
+<p>&nbsp;</p>
+<p><span class="Large-Bold-Red">ガンマ関数</span>とは，</p>
+<p>\(\Large    \displaystyle   \Gamma(x) = \int_0^{\infty} t^{x-1} \ e^{-t} dt \)</p>
+<p>を指します．いくつかの性質を記述していきます．</p>
+<p>&nbsp;</p>
+<p class="Large-Bold-Red">・階乗の一般化</p>
+<p>任意の正の整数  n n に対して，</p>
+<p>\(\Large    \displaystyle   \Gamma(n+1) = n! \)</p>
+<p>が成り立ちます．</p>
+<p class="Blue-Bold">証明</p>
+<p>\(\Large    \displaystyle   \Gamma(1) = \int_0^{\infty} t^{1-1} \ e^{-t} dt \)</p>
+<p>\(\Large    \displaystyle    = \int_0^{\infty}  e^{-t} dt = \left[ -e^{-t} \right]_0^{ \infty} = 1 \)</p>
+<p>となります．</p>
+<p>\(\Large    \displaystyle   \Gamma(n+1) = \int_0^{\infty} t^{n} \ e^{-t} dt \)</p>
+<p>となるので，部分積分を使えば，</p>
+<p>\(\Large    \displaystyle   (fg)' = f'g + fg' \)</p>
+<p>\(\Large    \displaystyle   \int f'g = \int (fg)' - \int fg' = fg  - \int fg' \)</p>
+<p>\(\Large    \displaystyle   g = t^n \rightarrow g' = n \ t^{n-1} \)</p>
+<p>\(\Large    \displaystyle   f' = e^{-t} \rightarrow f = - e^{-t} \)</p>
+<p>とすれば，</p>
+<p>\(\Large    \displaystyle    \int_0^{\infty} t^{n} \ e^{-t} dt = \left[ -e^{-t} \ t^n \right] - \int_0^{\infty} n t^{n-1} \ (-e^{-t}) dt \)</p>
+<p>\(\Large    \displaystyle     = 0 + n \int_0^{\infty}  t^{n-1} \ e^{-t} dt \)</p>
+<p>\(\Large    \displaystyle   = n \Gamma(n)  \)</p>
+<p>となります．</p>
+<p>\(\Large    \displaystyle   \Gamma(1)  = 1 \)</p>
+<p>でしたが，階乗は，</p>
+<p>\(\Large    \displaystyle   5!  = 4! \times 5 \)</p>
+<p>\(\Large    \displaystyle   4!  = 3! \times 4 \)</p>
+<p>\(\Large    \displaystyle   3!  = 2! \times 3 \)</p>
+<p>\(\Large    \displaystyle   2!  = 1! \times 2 \)</p>
+<p>\(\Large    \displaystyle   1!  = 0! \times 1 \)</p>
+<p>から，</p>
+<p>\(\Large    \displaystyle   0! = 1 \)</p>
+<p>となりますので，</p>
+<p>\(\Large    \displaystyle   \Gamma(1)  = 1 = 0! \)</p>
+<p>と書くことができます．したがって，</p>
+<p>\(\Large    \displaystyle   \Gamma(2)  = 1 \cdot \Gamma(1) = 1 \times 0! =1! \)</p>
+<p>\(\Large    \displaystyle   \Gamma(3)  = 2 \cdot \Gamma(2) = 2 \times 1! =2! \)</p>
+<p>\(\Large    \displaystyle   \Gamma(4)  = 3 \cdot \Gamma(3) = 3 \times 2! =3! \)</p>
+<p>\(\Large    \displaystyle   \Gamma(n)  = (n-1)! \)</p>
+<p>\(\Large    \displaystyle   \Gamma(n+1)  = n! \)</p>
+<p>となります．</p>
+<p>&nbsp;</p>
+<p><span class="Large-Bold-Red">・+１の場合</span></p>
+<p>上の式の途中にあるように，</p>
+<p>\(\Large    \displaystyle   \Gamma(n+1) = n \Gamma(n)  \)</p>
+<p>となります．これに関しては，ｎを整数と制約していませんので，整数ではなくても成り立ちます．　</p>
+<p>&nbsp;</p>
+<h1 class="Large-Bold-Red">・+１/2の場合</h1>
+<p>\(\Large    \displaystyle   \Gamma\left( \frac{1}{2} \right) = \int_0^{\infty} t^{\frac{1}{2}-1} \ e^{-t} dt \)</p>
+<p>\(\Large     \displaystyle   = \int_0^{\infty} t^{-\frac{1}{2}} \ e^{-t} dt \)</p>
+<p>ここで，</p>
+<p>\(\Large     \displaystyle   t \equiv u^2 \)</p>
+<p>とおくと，</p>
+<p>\(\Large     \displaystyle   dt = 2u \ du \)</p>
+<p>積分範囲は変わらないので，</p>
+<p>\(\Large     \displaystyle    \int_0^{\infty} t^{-\frac{1}{2}} \ e^{-t} dt =  \int_0^{\infty} u^{-1} \ e^{-u^2} \ u \ dt\)</p>
+<p>\(\Large     \displaystyle    =  \int_0^{\infty}  e^{-u^2}  \ dt\)</p>
+<p>これは<a href="Gaussian-integral-01.html">ガウス積分</a>，になるので，</p>
+<p>\(\Large     \displaystyle    =  \sqrt{ \pi} \)</p>
+<p>つまり，</p>
+<p>\(\Large    \displaystyle   \Gamma\left( \frac{1}{2} \right) = \sqrt{ \pi} \)</p>
+<p>となります．</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<p><span class="style10"><a href="index.html"><img src="TOP.png" alt="t" width="57" height="34" /></a></span></p>
+
+</body>
+
+</html>
+
