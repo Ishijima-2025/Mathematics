@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>x times exponential</title>
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+</script>
+
+<link href="160324.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+.style1 {color: #0000FF}
+.style10 {color: #000000; }
+.style3 {
+	color: #FF0000;
+	font-size: large;
+	font-weight: bold;
+}
+-->
+</style>
+<link href="130819.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<h1 class="style1">xと指数との積の極限</h1>
+<p>&nbsp;</p>
+<p>\(\Large \displaystyle \lim_{ x \to \infty }   x  \cdot e^{-  x^2} =0 \)</p>
+<p>\(\Large \displaystyle \lim_{ x \to -\infty }   x  \cdot e^{-  x^2} =0 \)</p>
+<p>を証明しましょう．</p>
+<p>&nbsp;</p>
+<p>まず，</p>
+<p>\(\Large f(x) = e^{x^2}-\frac{x^2}{2} \)</p>
+<p>を考えます．微分は，</p>
+<p>\(\Large f'(x) = 2x e^{x^2}-x \)</p>
+<p>\(\Large f''(x) = 2 e^{x^2}+4x^2 {x^2} \)</p>
+<p>となります．</p>
+<p>x&gt;0の範囲で，f''(x)&gt;0であり，f''(0)=2&gt;0であり，単調増加関数なので，f'(x)は単調増加関数となります．</p>
+<p> f'(0)=0であるからf(x)は単調増加関数となります．</p>
+<p> f(0)=1であるので，f(x)&gt;0となるので， </p>
+<p>\(\Large f(x) = e^{x^2}-\frac{x^2}{2} &gt; 0 \)</p>
+<p>\(\Large  e^{x^2} &gt; \frac{x^2}{2}  \)</p>
+<p>が導き出されます．この式の逆数を取り，ｘを掛けると，</p>
+<p>\(\Large 0 &lt; \frac{x}{e^{x^2}} &lt; \frac{x}{\frac{x^2}{2}}=\frac{2}{x}  \)</p>
+<p>となります．</p>
+<p>\(\Large \displaystyle \lim_{ x \to \infty }   \frac{2}{x} =0 \)</p>
+<p>となるので，上記の両辺が0となり，間に挟まれた式の極限も0となります（はさみうちの原理）．</p>
+<p>従って，</p>
+<p>\(\Large \displaystyle \lim_{ x \to \infty }   \frac{x}{e^{x^2}} =\lim_{ x \to \infty }   x \cdot e^{-x^2} = 0 \)</p>
+<p>となります．</p>
+<p>また，-∞の場合には，</p>
+<p>\(\Large t \equiv -x \)</p>
+<p>と置けば，</p>
+<p>\(\Large \displaystyle \lim_{ x \to -\infty }      x \cdot e^{-x^2} =\lim_{ t \to \infty    }   -t \cdot e^{-(-t)^2} = -\lim_{ t \to \infty }   t \cdot e^{-t^2} = 0 \)</p>
+<p>となりますので，証明できました．</p>
+<p>&nbsp;</p>
+<p><span class="style10"><a href="Polar.html"><img src="L-arrow.png" alt="l" width="57" height="34" /></a> <a href="index.html"><img src="TOP.png" alt="t" width="57" height="34" /></a></span></p>
+</body>
+</html>

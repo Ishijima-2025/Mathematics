@@ -1,0 +1,111 @@
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ['\\(','\\)'] ],
+    processEscapes: true
+  },
+  TeX: {
+    extensions: ["mhchem.js"]
+  },
+  CommonHTML: {
+    matchFontHeight: false
+  }
+});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+
+
+	
+
+
+
+<link href="160324.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+<title>sum</title>
+</head>
+
+<body>
+<p class="X-Large-Bold-RED">自然数の和</p>
+<p class="Large-Bold-Red">&nbsp;</p>
+<p class="Large-Bold-Red">数列の和について，まとめてみました．</p>
+<p><a href="https://yama-taku.science/mathematics/numerical-sequence/sum-of-square-and-cube/" target="_blank">こちら</a>，<a href="https://suuhaji.com/sum-of-squared/" target="_blank">こちら</a>などのサイトを参考にさせていただきました．ありがとうございます．</p>
+<p>&nbsp;</p>
+<p class="Large-Bold-Red">・1乗和</p>
+<p>\( \Large  \displaystyle    \sum_{k=1}^n k = \frac{n(n+1)}{2} \)</p>
+<p>これは，順番を逆転させた者同士の和をとればいいので，</p>
+<p>\( \Large  \displaystyle    1 + \hspace{15pt} 2  \hspace{14pt} + \hspace{12pt}  3  \hspace{18pt} +........+  \hspace{6pt} n-2 + n-1 + n \)</p>
+<p>\( \Large  \displaystyle    n +n-1 + n-2  \hspace{4pt} +........+  \hspace{16pt} 3  \hspace{16pt} +  \hspace{12pt} 2  \hspace{15pt} + 1 \)</p>
+<p>を縦同士で和をとると，</p>
+<p>\( \Large  \displaystyle    (n + 1) + (n + 1) + ........+  (n + 1) + (n + 1)   \)</p>
+<p>と(n-1)がn個の和となります．裏返して足したので，2で割る必要があり，</p>
+<p>\( \Large  \displaystyle    \sum_{k=1}^n k = \frac{n(n+1)}{2} \)</p>
+<p>となります．この公式は，ｋが奇数でも偶数でも成り立ち，</p>
+<p>奇数</p>
+<p>\( \Large  \displaystyle    1 + 2 + 3 + 4   + 5\)</p>
+<p>\( \Large  \displaystyle    5 + 4 + 3 + 2 + 1   \)</p>
+<p>偶数</p>
+<p>\( \Large  \displaystyle    1 + 2 + 3 + 4   \)</p>
+<p>\( \Large  \displaystyle    4 + 3 + 2 + 1   \)</p>
+<p>と，上記の公式を満たすことがわかります．</p>
+<p>&nbsp;</p>
+<p class="Large-Bold-Red">・２乗和</p>
+<p>\( \Large  \displaystyle    \sum_{k=1}^n k^2 = \frac{n(n+1)(2n+1)}{6} \)</p>
+<p>任意の正の整数ｋに対して，</p>
+<p>\( \Large  \displaystyle    k^3 - (k-1)^3 =k^3 - ( k^3 -3 k^2 +3 k -1) = 3k^2 -3 k +1 \)</p>
+<p>が成り立ちます．このｋに対して1,2, 3.....nを代入して足し合わせると，</p>
+<p>\( \Large  \displaystyle    \hspace{24pt} n^3 - (n-1)^3 = \hspace{16pt} 3n^2 \hspace{16pt} -3 n \hspace{20pt} +1 \)</p>
+<p>\( \Large  \displaystyle \hspace{96pt} \vdots \)</p>
+<p>\( \Large  \displaystyle    \hspace{24pt} 3^3 - \hspace{16pt} 2^3 \hspace{16pt} = \hspace{16pt} 3 \cdot 3^2 \hspace{8pt} -3 \cdot 3 \hspace{16pt} +1 \)</p>
+<p>\( \Large  \displaystyle    \hspace{24pt} 2^3 - \hspace{16pt}1^3 \hspace{16pt} = \hspace{16pt} 3 \cdot 2^2 \hspace{8pt} -3 \cdot 2 \hspace{16pt} +1 \)</p>
+<p>\( \Large  \displaystyle    +) \hspace{8pt} 1^3 - \hspace{16pt} 0^3 \hspace{16pt} = \hspace{16pt} 3 \cdot 1^2 \hspace{8pt} -3 \cdot 1 \hspace{16pt} +1 \)</p>
+<p>-------------------------------------------------------------------</p>
+<p>左辺は，n<sup>3</sup>だけ残りますので，まとめると，</p>
+<p>\( \Large  \displaystyle     n^3  =  3 \sum_{k=1}^n k^2  -3 \sum_{k=1}^n k +n \)</p>
+<p>右辺第二項は，<span class="Blue-Bold">1乗和</span>となりますので，</p>
+<p>\( \Large  \displaystyle     n^3  =  3 \sum_{k=1}^n k^2  -3 \frac{n(n+1)}{2} +n \)</p>
+<p>右辺第一項が求めたいものなので，入れ替えると，</p>
+<p>\( \Large  \displaystyle       3 \sum_{k=1}^n k^2  = n^3  +3 \frac{n(n+1)}{2} -n \)</p>
+<p>\( \Large  \displaystyle        \hspace{48pt}  =  \frac{2 n^3  + 3 n(n+1)- 2n}{2} \)</p>
+<p>\( \Large  \displaystyle        \hspace{48pt}  =  \frac{2 n^3  + 3 n^2 + n}{2} \)</p>
+<p>\( \Large  \displaystyle        \hspace{48pt}  =  \frac{n (2 n^2  + 3 n + 1)}{2} \)</p>
+<p>\( \Large  \displaystyle        \hspace{48pt}  =  \frac{n ( n + 1) (2n + 1)}{2} \)</p>
+<p>よって，</p>
+<p>\( \Large  \displaystyle\sum_{k=1}^n k^2  =  \frac{n ( n + 1) (2n + 1)}{6} \)</p>
+<p>となります．</p>
+<p>&nbsp;</p>
+<p class="Large-Bold-Red">・３乗和</p>
+<p>\( \Large  \displaystyle    \sum_{k=1}^n k^2 = \left\{ \frac{n(n+1)}{2} \right\}^2 \)</p>
+<p>任意の正の整数ｋに対して，</p>
+<p>\( \Large  \displaystyle    k^4 - (k-1)^4 =k^4 - ( k^4 -4 k^3 +6 k^2 -4 k -1) = 4 k^3 -6 k^2 +4 k -1 \)</p>
+<p>が成り立ちます．このｋに対して1,2, 3.....nを代入して足し合わせると，</p>
+<p>\( \Large  \displaystyle    \hspace{24pt} n^4 - (n-1)^4 = \hspace{16pt} 4 n^3 \hspace{24pt} - \hspace{20pt} 6 n^2 \hspace{16pt} + 4 n \hspace{20pt} - 1 \)</p>
+<p>\( \Large  \displaystyle \hspace{120pt} \vdots \)</p>
+<p>\( \Large  \displaystyle    \hspace{24pt} 3^4 - \hspace{16pt} 2^4 \hspace{20pt} = \hspace{20pt} 4 \cdot 3^3 \hspace{16pt} - \hspace{16pt} 6 \cdot 3^2 \hspace{8pt} +4 \cdot 3 \hspace{16pt} - 1 \)</p>
+<p>\( \Large  \displaystyle    \hspace{24pt} 2^4 - \hspace{16pt} 1^4 \hspace{20pt} = \hspace{20pt} 4 \cdot 2^3 \hspace{16pt} - \hspace{16pt} 6 \cdot 2^2 \hspace{8pt} +4 \cdot 2 \hspace{16pt} - 1 \)</p>
+<p>\( \Large  \displaystyle    +) \hspace{8pt}  1^4 - \hspace{16pt}0^4 \hspace{20pt} = \hspace{20pt} 4 \cdot 1^3 \hspace{16pt} - \hspace{16pt} 6 \cdot 1^2 \hspace{8pt} +4 \cdot 1 \hspace{16pt} - 1 \)</p>
+<p>------------------------------------------------------------------------------------------</p>
+<p>左辺は，n<sup>4</sup>だけ残りますので，まとめると，</p>
+<p>\( \Large  \displaystyle     n^4  =  4 \sum_{k=1}^n k^3  -6 \sum_{k=1}^n k^2 + 4 \sum_{k=1}^n k -n \)</p>
+<p>右辺第二項は，<span class="Blue-Bold">２乗和</span>，右辺第三項は，<span class="Blue-Bold">1乗和</span>となりますので，</p>
+<p>\( \Large  \displaystyle     n^4  =  4 \sum_{k=1}^n k^3  -6 \frac{n ( n + 1) (2n + 1)}{6} + 4 \frac{n(n+1)}{2} -n \)</p>
+<p>右辺第一項が求めたいものなので，入れ替えると，</p>
+<p>\( \Large  \displaystyle       4 \sum_{k=1}^n k^3  = n^4  +n ( n + 1) (2n + 1) -2 n(n+1)+n \)</p>
+<p>\( \Large  \displaystyle        \hspace{48pt}  =  n^4  +2 n^3 + 3 n^2 +n -2 n^2 -2n+n \)</p>
+<p>\( \Large  \displaystyle        \hspace{48pt}  =  n^4  +2 n^3 +  n^2  \)</p>
+<p>\( \Large  \displaystyle        \hspace{48pt}  =  n^2 (n^2  +2 n +  1)  \)</p>
+<p>\( \Large  \displaystyle        \hspace{48pt}  =  n^2 (n +  1)^2  \)</p>
+<p>よって，</p>
+<p>\( \Large  \displaystyle    \sum_{k=1}^n k^2 = \left\{ \frac{n(n+1)}{2} \right\}^2 \)</p>
+<p>となります．</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span class="style7"><a href="index.html"><img src="TOP.png" alt="t" width="57" height="34" /></a></span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>
