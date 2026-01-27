@@ -1,0 +1,63 @@
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ['\\(','\\)'] ],
+    processEscapes: true
+  },
+  TeX: {
+    extensions: ["mhchem.js"]
+  },
+  CommonHTML: {
+    matchFontHeight: false
+  }
+});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+
+
+	
+
+
+
+<link href="160324.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+</head>
+
+<body>
+<p class="X-Large-Bold-RED">微分方程式-01</p>
+<p class="Large-Bold-Red">&nbsp;</p>
+<p>微分方程式について，まとめてみました．</p>
+<p>&nbsp;</p>
+<p class="Blue-Bold">・\( \Large     \frac{dx}{dt} = -kx+ke^{-kt} \)</p>
+<p>\( \Large \frac{dx}{dt} +kx = ke^{-kt} \)</p>
+<p>両辺を，\( \Large e^{-kt} \)，で割って，</p>
+<p>\( \Large e^{kt}\frac{dx}{dt} +kx e^{kt}= k \)</p>
+<p>\( \Large k e^{kt}= \frac{d}{dt} e^{kt} \)なので，</p>
+<p>\( \Large e^{kt}\frac{dx}{dt} + x \frac{d}{dt} e^{kt}= k \)</p>
+<p>\( \Large  \frac{d}{dt} (fg)= \frac{df}{dt}g + f \frac{dg}{dt} \)から，</p>
+<p>\( \Large \frac{d}{dt} \left( xe^{kt} \right) = k \)</p>
+<p>\( \Large  xe^{kt}  = kt +C \)</p>
+<p>\( \Large  x = e^{-kt}  \left( kt +C \right) \)</p>
+<p>&nbsp;</p>
+<p class="Blue-Bold">・\( \Large     \frac{dx}{dt} = -kx+a t^me^{-kt} \)</p>
+<p>\( \Large \frac{dx}{dt} +kx = a t^m e^{-kt} \)</p>
+<p>両辺を，\( \Large e^{-kt} \)，で割って，</p>
+<p>\( \Large e^{kt}\frac{dx}{dt} +kx e^{kt}= a t^m \)</p>
+<p>\( \Large k e^{kt}= \frac{d}{dt} e^{kt} \)なので，</p>
+<p>\( \Large e^{kt}\frac{dx}{dt} + x \frac{d}{dt} e^{kt}= a t^m \)</p>
+<p>\( \Large  \frac{d}{dt} (fg)= \frac{df}{dt}g + f \frac{dg}{dt} \)から，</p>
+<p>\( \Large \frac{d}{dt} \left( xe^{kt} \right) = a t^m \)</p>
+<p>\( \Large  xe^{kt}  = \frac{1}{m+1}at^{m+1} +C \)</p>
+<p>\( \Large  x = e^{-kt}  \left( \frac{1}{m+1}at^{m+1}  +C \right) \)</p>
+<p class="Blue-Bold">&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span class="style7"><a href="index.html"><img src="TOP.png" alt="t" width="57" height="34" /></a></span><a href="Differential equation-02.html"><img src="R-arrow.png" width="57" height="34" alt=""/></a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

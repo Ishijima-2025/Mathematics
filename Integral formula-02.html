@@ -1,0 +1,64 @@
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ['\\(','\\)'] ],
+    processEscapes: true
+  },
+  TeX: {
+    extensions: ["mhchem.js"]
+  },
+  CommonHTML: {
+    matchFontHeight: false
+  }
+});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+
+
+	
+
+
+
+<link href="160324.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+<title>Integral formula</title>
+</head>
+
+<body>
+<p class="X-Large-Bold-RED">積分公式-02</p>
+<p class="Large-Bold-Red">&nbsp;</p>
+<p>積分公式について，まとめてみました．</p>
+<p><span class="Blue-Bold">・オイラーの公式</span></p>
+<p class="Blue-Bold">・\( \Large   \displaystyle   y =  \int e^{- \alpha t} \cdot  sin ( \omega t) \ dt \)</p>
+<p> \( \Large \displaystyle sin ( \omega t) = \frac{e^{j \omega t}-e^{-j \omega t}}{2j} \)</p>
+<p> \( \Large \displaystyle y  =  \int e^{- \alpha t} \cdot \frac{e^{j \omega t}-e^{-j \omega t}}{2j} \ dt\)</p>
+<p>\( \Large \displaystyle = \frac{1}{2j} \int \left[ e^{( - \alpha + j \omega)t} -e^{( - \alpha - j \omega)t}\right] \ dt \)</p>
+<p>\( \Large \displaystyle = \frac{1}{2j} \left[ \frac{1}{- \alpha + j \omega} e^{( - \alpha + j \omega)t} - \frac{1}{- \alpha - j \omega} e^{( - \alpha - j \omega)t}\right] \)</p>
+<p>\( \Large \displaystyle = \frac{1}{2j} \ e^{ - \alpha t} \  \left[ \frac{1}{- \alpha + j \omega} e^{j \omega t} - \frac{1}{- \alpha - j \omega} e^{ - j \omega t}\right] \)</p>
+<p>\( \Large \displaystyle = \frac{1}{2j} \ e^{ - \alpha t} \  \left[ \frac{1}{- \alpha + j \omega} e^{j \omega t} + \frac{1}{ \alpha + j \omega} e^{ - j \omega t}\right] \)</p>
+<p>\( \Large \displaystyle = \frac{1}{2j} \ e^{ - \alpha t} \  \left[ \frac{- \alpha - j \omega}{ \alpha^2 +  \omega^2} e^{j \omega t} + \frac{ \alpha - j \omega}{ \alpha^2 +  \omega^2} e^{ - j \omega t}\right] \)</p>
+<p>\( \Large \displaystyle = \frac{1}{2j} \frac{ 1}{ \alpha^2 +  \omega^2} \ e^{ - \alpha t} \  \left[ - \alpha ( e^{j \omega t} -  e^{-j \omega t}) - j \  \omega( e^{j \omega t} +  e^{-j \omega t}) \right] \)</p>
+<p>\( \Large \displaystyle = \frac{ 1}{ \alpha^2 +  \omega^2} \ e^{ - \alpha t} \  \left[ - \alpha \cdot sin (  \omega t) -  \omega \cdot cos (\omega t) \right] \)</p>
+<p>&nbsp;</p>
+<p> <span class="Blue-Bold">・\( \Large \displaystyle y  =  \int e^{- \alpha t} \cdot  cos ( \omega t) \ dt \)</span></p>
+<p>\( \Large \displaystyle  cos ( \omega t) = \frac{e^{j \omega t}+e^{-j \omega t}}{2} \)</p>
+<p> \( \Large \displaystyle y  =  \int e^{- \alpha t} \cdot \frac{e^{j \omega t}+e^{-j \omega t}}{2} \ dt\)</p>
+<p>\( \Large \displaystyle = \frac{1}{2} \int \left[ e^{( - \alpha + j \omega)t} +e^{( - \alpha - j \omega)t}\right] \ dt \)</p>
+<p>\( \Large \displaystyle = \frac{1}{2} \left[ \frac{1}{- \alpha + j \omega} e^{( - \alpha + j \omega)t} + \frac{1}{- \alpha - j \omega} e^{( - \alpha - j \omega)t}\right] \)</p>
+<p>\( \Large \displaystyle = \frac{1}{2} \ e^{ - \alpha t} \  \left[ \frac{1}{- \alpha + j \omega} e^{j \omega t} + \frac{1}{- \alpha - j \omega} e^{ - j \omega t}\right] \)</p>
+<p>\( \Large \displaystyle = \frac{1}{2} \ e^{ - \alpha t} \  \left[ \frac{1}{- \alpha + j \omega} e^{j \omega t} - \frac{1}{ \alpha + j \omega} e^{ - j \omega t}\right] \)</p>
+<p>\( \Large \displaystyle = \frac{1}{2} \ e^{ - \alpha t} \  \left[ \frac{- \alpha - j \omega}{ \alpha^2 +  \omega^2} e^{j \omega t} - \frac{ \alpha - j \omega}{ \alpha^2 +  \omega^2} e^{ - j \omega t}\right] \)</p>
+<p>\( \Large \displaystyle = \frac{1}{2} \frac{ 1}{ \alpha^2 +  \omega^2} \ e^{ - \alpha t} \  \left[ - \alpha ( e^{j \omega t} +  e^{-j \omega t}) - j \  \omega( e^{j \omega t} -  e^{-j \omega t}) \right] \)</p>
+<p>\( \Large \displaystyle = \frac{1}{2} \frac{ 1}{ \alpha^2 +  \omega^2} \ e^{ - \alpha t} \  \left[ - \alpha ( e^{j \omega t} +  e^{-j \omega t}) + \frac{1}{ j} \  \omega( e^{j \omega t} -  e^{-j \omega t}) \right] \)</p>
+<p>\( \Large \displaystyle = \frac{ 1}{ \alpha^2 +  \omega^2} \ e^{ - \alpha t} \  \left[ - \alpha \cdot cos (  \omega t) +  \omega \cdot sin (\omega t) \right] \)</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span class="style7"><a href="Integral formula-01.html"><img src="L-arrow.png" width="57" height="34" alt=""/> </a></span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

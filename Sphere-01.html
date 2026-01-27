@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Sphere-01</title>
+<style type="text/css">
+<!--
+.style1 {color: #0000FF}
+.style10 {color: #000000; }
+.style3 {
+	color: #FF0000;
+	font-size: large;
+	font-weight: bold;
+}
+-->
+</style>
+<link href="130819.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<h1 class="style1">球冠，球帯の面積の求め方-01</h1>
+<p class="Large-Bold-Blue">&nbsp;</p>
+<p>一点から発せられた光をあるNAを持つ対物レンズで取り込む，そのときにNAによってどの程度の明るさが異なるか，など気になりますね．<br />
+いろいろなサイトに，NAと明るさの関係の記述があります（<a href="http://www.olympus.co.jp/jp/lisg/bio-micro/terms/11.cfm" target="_blank">オリンパス</a>）．</p>
+<p>そこで，まずは球をある平面で切り取った部分の表面積がどのような値になるかを考えましょう．<br />
+その際，<span class="Large-Bold-Red">半頂角</span>との関係も理解しましょう．</p>
+<p><img src="Sphere-04.jpg" width="313" height="312" /></p>
+<p>球の一部分の表面積を求めるには，積分が必要となります．<br />
+そこで，まずは球そのものの表面積を計算しましょう．<br />
+<a href="http://www7b.biglobe.ne.jp/~math-tota/su3/kyuhyo.htm" target="_blank">こちら</a>，<a href="http://www004.upp.so-net.ne.jp/s_honma/area/sphere.htm" target="_blank">こちら</a>，のサイトを参考にしました．特に，<a href="http://www004.upp.so-net.ne.jp/s_honma/area/sphere.htm" target="_blank">こちら</a>，のサイトでは計算方法がよくわからなかったので，独自に計算してみました．</p>
+<p><img src="Sphere-01.jpg" width="392" height="399" /></p>
+<p>まずは上記の図を用いて考えましょう．<br />
+球の表面積は，半径，ｙ，の円に微小な厚みをかけた円帯を足し合わせていったものですから，半球の表面積は，</p>
+<p><img src="Sphere-01.gif" width="148" height="100" /></p>
+<p>となります．<br />
+ここで，なぜ，ｘ軸に沿っての積分，ｄｘ，ではないか，の説明は，<a href="http://www7b.biglobe.ne.jp/~math-tota/su3/kyuhyo.htm" target="_blank">こちら</a>，のサイトに丁寧に書かれているので，参考にしてみてください．</p>
+<p><img src="Sphere-02.gif" width="78" height="32" /></p>
+<p>の関係がありますので，</p>
+<p><img src="Sphere-03.gif" width="104" height="32" /></p>
+<p>積分範囲は，</p>
+<p><img src="Sphere-04.gif" width="170" height="128" /></p>
+<p>となり，</p>
+<p><img src="Sphere-05.gif" width="228" height="100" /></p>
+<p>となります．従って，</p>
+<p><img src="Sphere-06.gif" width="218" height="92" /></p>
+<p>となり，この計算は，半球，でしたので球の表面積は，4πr<sup>2</sup>，と計算できます．</p>
+<p>次に，全表面積ではなく，球をスライスした際の表面積を求めましょう．</p>
+<p><span class="style10"><a href="index.html"><img src="TOP.png" alt="t" width="57" height="34" /></a> <a href="Sphere-02.html"><img src="R-arrow.png" alt="r" width="57" height="34" /></a></span></p>
+</body>
+</html>

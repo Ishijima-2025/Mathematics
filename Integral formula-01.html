@@ -1,0 +1,66 @@
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ['\\(','\\)'] ],
+    processEscapes: true
+  },
+  TeX: {
+    extensions: ["mhchem.js"]
+  },
+  CommonHTML: {
+    matchFontHeight: false
+  }
+});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+
+
+	
+
+
+
+<link href="160324.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+<title>Integral formula</title>
+</head>
+
+<body>
+<p class="X-Large-Bold-RED">積分公式-01</p>
+<p class="Large-Bold-Red">&nbsp;</p>
+<p>積分公式について，まとめてみました．</p>
+<p>&nbsp;</p>
+<p class="Blue-Bold">・\( \Large   \displaystyle   y =  \int e^{- \alpha t} \cdot  sin ( \omega t) \ dt \)</p>
+<p class="Blue-Bold">&nbsp;</p>
+<p class="Blue-Bold">・部分積分</p>
+<p>\( \Large \displaystyle (fg)' = f'g + fg' \) </p>
+<p>\( \Large \displaystyle f'g = (fg)' - fg' \)</p>
+<p> \( \Large \displaystyle \int f'g \ dt = fg - \int fg' \ dt \)</p>
+<p> \( \Large \displaystyle f' = e^{- \alpha t} \rightarrow f = - \frac{1}{\alpha} e^{- \alpha t} \)</p>
+<p> \( \Large \displaystyle g = sin ( \omega t) \rightarrow g' = \omega \ cos ( \omega t) \)</p>
+<p> \( \Large \displaystyle \int e^{- \alpha t} \cdot  sin ( \omega t) \ dt = - \frac{1}{\alpha} e^{- \alpha t} \cdot sin ( \omega t) - \int - \frac{1}{\alpha} e^{- \alpha t} \  \omega \ cos ( \omega t) \ dt\)</p>
+<p>\( \Large \displaystyle \int - \frac{1}{\alpha} e^{- \alpha t} \  \omega \ cos ( \omega t) \)</p>
+<p> \( \Large \displaystyle f' = e^{- \alpha t} \rightarrow f = - \frac{1}{\alpha} e^{- \alpha t} \)</p>
+<p> \( \Large \displaystyle g = cos ( \omega t) \rightarrow g' = - \omega \ sin ( \omega t) \)</p>
+<p> \( \Large \displaystyle \int e^{- \alpha t} \cdot  cos ( \omega t) \ dt = - \frac{1}{\alpha} e^{- \alpha t} \cdot cos ( \omega t) - \int - \frac{1}{\alpha} e^{- \alpha t} \  (-\omega \ sin ( \omega t)) \ dt\)</p>
+<p>\( \Large \displaystyle \int e^{- \alpha t} \cdot  sin ( \omega t) \ dt = - \frac{1}{\alpha} e^{- \alpha t} \cdot sin ( \omega t) - \int - \frac{1}{\alpha} e^{- \alpha t} \  \omega \ cos ( \omega t) \ dt\)</p>
+<p> \( \Large \displaystyle = - \frac{1}{\alpha} e^{- \alpha t} \cdot sin ( \omega t) \)</p>
+<p> \( \Large \displaystyle + \frac{\omega}{\alpha} \left[- \frac{1}{\alpha} e^{- \alpha t} \cdot cos ( \omega t) - \int - \frac{1}{\alpha} e^{- \alpha t} \  (-\omega \ sin ( \omega t)) \ dt \right] \)</p>
+<p> \( \Large \displaystyle = - \frac{1}{\alpha} e^{- \alpha t} \cdot sin ( \omega t) - \frac{\omega}{\alpha^2} e^{- \alpha t} \cdot cos ( \omega t) \)  &amp;- \frac{\omega^2}{\alpha^2} \int  e^{- \alpha t} \ sin ( \omega t) \ dt \)</p>
+<p> \( \Large \displaystyle \left(1+\frac{\omega^2}{\alpha^2} \right)\int  e^{- \alpha t} \ sin ( \omega t) \ dt = - \frac{1}{\alpha} e^{- \alpha t} \cdot sin ( \omega t) - \frac{\omega}{\alpha^2} e^{- \alpha t} \cdot cos ( \omega t) \)</p>
+<p> \( \Large \displaystyle - \frac{\omega^2}{\alpha^2} \int  e^{- \alpha t} \ sin ( \omega t) \ dt \)</p>
+<p> \( \Large \displaystyle \frac{\alpha^2 + \omega^2}{\alpha^2} \int  e^{- \alpha t} \ sin ( \omega t) \ dt = - \frac{1}{\alpha} e^{- \alpha t} \cdot sin ( \omega t) - \frac{\omega}{\alpha^2} e^{- \alpha t} \cdot cos ( \omega t) \)</p>
+<p> \( \Large \displaystyle \int  e^{- \alpha t} \ sin ( \omega t) \ dt = \frac{\alpha^2}{\alpha^2 + \omega^2} \left[- \frac{1}{\alpha} e^{- \alpha t} \cdot sin ( \omega t) - \frac{\omega}{\alpha^2} e^{- \alpha t} \cdot cos ( \omega t) \right]\)</p>
+<p> \( \Large \displaystyle = \frac{1}{\alpha^2 + \omega^2} \left[- \alpha \ e^{- \alpha t} \cdot sin ( \omega t) - \omega \ e^{- \alpha t} \cdot cos ( \omega t) \right]\)   </p>
+<p>\( \Large \displaystyle = e^{- \alpha t} \frac{1}{\alpha^2 + \omega^2} \left[- \alpha \cdot sin ( \omega t) - \omega \  \cdot cos ( \omega t) \right]\)</p>
+<p>&nbsp;</p>
+<p>次ページには<span class="Blue-Bold">オイラーの公式</span>を使ってみます．</p>
+<p>&nbsp;</p>
+<p><span class="style7"><a href="index.html"><img src="TOP.png" alt="t" width="57" height="34" /></a></span><a href="Integral formula-02.html"><img src="R-arrow.png" width="57" height="34" alt=""/></a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

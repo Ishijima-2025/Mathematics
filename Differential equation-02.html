@@ -1,0 +1,51 @@
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ['\\(','\\)'] ],
+    processEscapes: true
+  },
+  TeX: {
+    extensions: ["mhchem.js"]
+  },
+  CommonHTML: {
+    matchFontHeight: false
+  }
+});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+
+
+	
+
+
+
+<link href="160324.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+</head>
+
+<body>
+<p class="X-Large-Bold-RED">微分方程式-02</p>
+<p class="Large-Bold-Red">&nbsp;</p>
+<p>微分方程式について，まとめてみました．</p>
+<p>&nbsp;</p>
+<p class="Blue-Bold">・\( \Large  \displaystyle   \frac{dx}{dt} = f(t) - kx \)</p>
+<p>\( \Large \displaystyle \frac{dx}{dt} +kx = f(t) \)</p>
+<p>両辺を，\( \Large e^{kt} \)，で掛けて，</p>
+<p>\( \Large  \displaystyle e^{kt}\frac{dx}{dt} +kx \ e^{kt}= f(t) \ e^{kt} \)</p>
+<p>\( \Large   \displaystyle \frac{d}{dt}( x \ e^{kt}) = k \ x \ e^{kt} + \frac{dx}{dt} \ e^{kt}\)なので，</p>
+<p>\( \Large   \displaystyle \frac{d}{dt} ( x \ e^{kt})  = f(t) \ e^{kt}\)</p>
+<p>\( \Large   \displaystyle  x \ e^{kt}  = \int f(t) \ e^{kt} \ dt\)</p>
+<p>\( \Large   \displaystyle  x    = e^{-kt} \int f(t) \ e^{kt} \ dt\)</p>
+<p>&nbsp;</p>
+<p class="Blue-Bold">&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span class="style7"><a href="Differential equation-01.html"><img src="L-arrow.png" width="57" height="34" alt=""/></a></span><span class="style7"><a href="index.html"><img src="TOP.png" alt="t" width="57" height="34" /></a></span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>
