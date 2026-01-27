@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Phase difference</title>
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+</script>
+
+<link href="160324.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+</head>
+
+<body>
+<p class="X-Large-Bold-RED">２つの正弦波の位相差を求める方法-02</p>
+<p class="Large-Bold-Red">位相が異なる正弦波の二次元プロット</p>
+<p>2つの正弦波，を以下のように設定します</p>
+<p>\(\Large  x = x_0 \cdot sin \ ( \omega t) \)　</p>
+<p>\(\Large  y = y_0 \cdot sin \ ( \omega t + \phi ) \)　<br />
+</p>
+<p>ここで，それぞれの振幅は既知なので，振幅を規格化して，１とします．したがって，</p>
+<p>\(\Large  x =  sin \ ( \omega t) \)　</p>
+<p>\(\Large  y =  sin \ ( \omega t + \phi ) \)　</p>
+<p>ここで，</p>
+<p>\(\Large  u =   \omega t + \frac{\phi}{2}  \)　</p>
+<p>とすると，</p>
+<p>\(\Large  x =  sin \ ( u -  \frac{\phi}{2}) \)　</p>
+<p>\(\Large  y =  sin \ ( u +  \frac{\phi}{2} ) \)　</p>
+<p>となります．</p>
+<p>三角関数の公式，</p>
+<p>\(\Large    sin(x+y) = sin \ x \cdot cos \ y + cos \ x \cdot sin \ y\)　</p>
+<p>\(\Large    sin(x-y) = sin \ x \cdot cos \ y - cos \ x \cdot sin \ y\)　</p>
+<p>から，</p>
+<p>\(\Large x = sin ( u - \frac{ \phi}{2}) = sin \ u \cdot cos \frac{ \phi}{2} - cos \ u \cdot sin \frac{ \phi}{2} \)</p>
+<p>\(\Large y = sin ( u + \frac{ \phi}{2})= sin \ u \cdot cos \frac{ \phi}{2} + cos \ u \cdot sin \frac{ \phi}{2} \)</p>
+<p>となります．ここから変形していくのですが，ちょっとズルをして，結果をもとに計算していきます．それは，<br />
+  <span class="Blue-Bold">　XYプロットは楕円体となる．<br />
+  　45度傾いている</span><br />
+を既知の事実として考えていきます．</p>
+<p>回転の公式は，</p>
+<p>\(\Large X = x \cdot cos \ \theta - y \cdot sin \ \theta  \)</p>
+<p>\(\Large  Y = x \cdot sin \ \theta + y \cdot cos \ \theta \)</p>
+<p>ですが，ここで，θ=45度，と言う前提で進めると，</p>
+<p>\(\Large X =  \displaystyle \frac{x-y}{ \sqrt{2}} = \displaystyle -2 \ \frac{cos \ u \cdot sin \frac{ \phi}{2}}{ \sqrt{2}} = - \sqrt{2} \ sin \frac{ \phi}{2} \cdot cos \ u \)</p>
+<p>\(\Large  Y =  \displaystyle \frac{x+y}{ \sqrt{2}} =  \displaystyle 2 \ \frac{sin \ u \cdot cos \frac{ \phi}{2}}{ \sqrt{2}} =  \sqrt{2} \ cos \frac{ \phi}{2} \cdot sin \ u \)</p>
+<p>となります．ここで，</p>
+<p>\(\Large a \equiv - \sqrt{2} \ sin \frac{ \phi}{2} \)</p>
+<p> \(\Large b \equiv  \sqrt{2} \ cos \frac{ \phi}{2}\)</p>
+<p> とすると，</p>
+<p>\(\Large X = a \cdot cos \ u　\)</p>
+<p> \(\Large Y = b \cdot sin \ u \)</p>
+<p> となり， </p>
+<p>\(\Large \displaystyle  \frac{X^2}{a^2} + \frac{Y^2}{b^2} = cos^2 u + sin^2u =1 \)</p>
+<p> となり，<span class="Red-Bold">楕円</span>となることがわかります．つまり，<span class="Red-Bold">最初のx,y,　は45度傾いた楕円</span>となるのです．</p>
+<p><span class="Red-Bold">a, b,が楕円の長軸，短軸の長さ</span>となります．</p>
+<p>位相を変えてXYプロットを取っていくと，</p>
+<p><img src="Phase difference-01.png" width="618" height="498" alt=""/></p>
+<p>となり，<br />
+  <span class="Blue-Bold">　位相が0度：直線<br />
+  　位相が90度：円</span><br />
+となります．</p>
+<p>この<span class="Blue-Bold">長軸，短軸の式に位相が入っている</span>ので，ここから位相を推定できますが，これも結構面倒な導出となります．</p>
+<p>次ページから，計算を簡単にするために，<span class="Large-Bold-Blue">ベクトル積と面積との関係</span>，を導入していきます．</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span class="style7"><a href="Phase difference-01.html"><img src="L-arrow.png" alt="l" width="57" height="34" border="0" /></a> <a href="index.html"><img src="TOP.png" alt="t" width="57" height="34" /></a></span><a href="Phase difference-03.html"><img src="R-arrow.png" alt="r" width="57" height="34" /></a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

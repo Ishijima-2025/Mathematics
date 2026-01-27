@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Phase difference</title>
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+</script>
+
+<link href="160324.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+</head>
+
+<body>
+<p class="X-Large-Bold-RED">２つの正弦波の位相差を求める方法-06</p>
+<p class="Large-Bold-Red">ノイズの影響</p>
+<p>前回までのシミュレーションは，理想的な正弦波を作成してみましたが，波形にノイズが加わるとどの程度位相の推定の精度が変化するかを確認しました．</p>
+<p>今回は，Labviewをもちいて，ガウスホワイトノイズを加えてみました．</p>
+<p>まずは，前ページと同じ条件で，ノイズが０，の場合です．</p>
+<p><span class="X-Large-Bold-Blue">Noise = 0:</span></p>
+<p><img src="Phase difference-06.png" width="840" height="828" alt=""/></p>
+<p>たすき掛けと非線形近似による推定を行いました．全ページと同様に，<span class="Red-Bold">30度</span>の位相を正しく算定できています．</p>
+<p>非線形近似による位相計算においても，<span class="Red-Bold">30度</span>と正しく算定できています．</p>
+<p>&nbsp;</p>
+<p>次に，ノイズを加えたときの結果です．</p>
+<p class="X-Large-Bold-Blue">Noise = 0.02:</p>
+<p><img src="Phase difference-07.png" width="819" height="807" alt=""/></p>
+<p>非線形近似においては，<span class="Red-Bold">Φ=29.83</span>，といい感じに算定できましたが，たすき掛けでは，<span class="Blue-Bold">NaN</span>，という値が出てしまいました．</p>
+<p>これは，ばらつきによって，<span class="Blue-Bold">arcsin，が-1以下，1以上</span>，の値を取ってしまったからです．</p>
+<p>これらの，NaN，を除いて計算したのが，右下の結果です．これも，<span class="Red-Bold">Φ=29.6±15.92</span>，と標準偏差は大きいですが，なんとか平均値はいい感じです．</p>
+<p>&nbsp;</p>
+<p><span class="X-Large-Bold-Blue">Noise = 0.04:</span></p>
+<p><img src="Phase difference-08.png" width="797" height="785" alt=""/></p>
+<p>非線形近似においては，<span class="Red-Bold">Φ=29.79</span>，といい感じに算定できました．実際の波形を見てもそれほどノイジーではないですね．</p>
+<p>しかし，たすき掛けでは，<span class="Red-Bold">Φ=23.14±25.91</span>，と平均値，標準偏差，双方ともあまり良くない値となってしまいました．</p>
+<p>これは，非線形近似においては，すべてのデータから推定しているのに対して，たすき掛けでは，2点間の位置関係から位相を求めているので，計算不可能な場合が多くなっていたためかと思います．</p>
+<p>ですので，たすき掛け，はノイズにはあまり強くないのかな？と感じました．</p>
+<p>しかしながら，いろいろなシミュレーション，<a href="https://www.analog.com/jp/resources/design-tools-and-calculators/ltspice-simulator.html" target="_blank">LTspice</a>，などの解析にはとても心強いツールとなりそうです．楕円のベクトル積など初めて学ぶ点も多く，勉強になりました．</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span class="style7"><a href="Phase difference-05.html"><img src="L-arrow.png" alt="l" width="57" height="34" border="0" /></a> <a href="index.html"><img src="TOP.png" alt="t" width="57" height="34" /></a></span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

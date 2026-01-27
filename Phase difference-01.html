@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Phase difference</title>
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+</script>
+
+<link href="160324.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+</head>
+
+<body>
+<p class="X-Large-Bold-RED">２つの正弦波の位相差を求める方法-01</p>
+<p class="Large-Bold-Red">２つの正弦波の位相差</p>
+<p>位相差を計算する方法は，色々あり，代表的なものは，</p>
+<p><span class="Red-Bold">・振幅が０（もしくはピーク）を通る時間を見積もり，その差を求める</span><br />
+  　　<span class="Blue-Bold">（ノイズがのると推定が難しくなる）</span><br />
+</p>
+<p><span class="Red-Bold">・位相スペクトルを求める</span><br />
+　　<span class="Blue-Bold">（位相スペクトル自体が難しい）</span></p>
+<p><span class="Red-Bold">・それぞれ，正弦波でフィットし，位相成分の差を求める</span><br />
+　　<span class="Blue-Bold">（非線形フィット，ソルバーなどを使わなくてはならない）</span></p>
+<p>など，色々あります．それぞれに一長一短があります．</p>
+<p>しかし，<span class="Red-Bold">独自の方法</span>で<a href="https://blog.goo.ne.jp/je-suis-sumichan/e/0e562abe1dacdfd5ad65763d4658c685" target="_blank">位相差を計算してくれるサイト</a>が有りました．</p>
+<p>計算自体はそれほど難しくはなさそうなのですが，一体何でこんな手法を取っているのかがわかりませんでした．</p>
+<p>そこで，敬意を込めて，この計算手法の裏に潜む原理を考えていきます．</p>
+<p>実は，このサイトを見つけたのは，<span class="Red-Bold">Copilot</span>，で位相差の算出方法を聞いたら，<span class="Red-Bold">”こんなユニークなサイトがあるよ”</span>，と教えてもらいました．</p>
+<p>特徴は，<span class="Large-Bold-Red">たすき掛け</span>，をすることにあり，</p>
+<p>\(\Large  x_{n} \cdot y_{n+1} - x_{n+1} \cdot y_n   \)</p>
+<p>を計算しています．</p>
+<p>&nbsp;</p>
+<p>色々制限があり，<br />
+  <span class="Blue-Bold">　振幅が既知，周波数は同じ，位相差のみ<br />
+  　位相差は-90度～90度まで</span><br />
+とありますが，それでも有益です．</p>
+<p>&nbsp;</p>
+<p>結構いろいろな計算をしなくてはならないので，順を追って理解していきます．</p>
+<p><a href="Phase difference-02.html">２．２つの波形のXYプロットはどうなるか？</a></p>
+<p><a href="Phase difference-03.html">３．ベクトル積は？</a></p>
+<p><a href="Phase difference-04.html">４．位相との関係は？</a></p>
+<p><a href="Phase difference-05.html">５．エクセルで調べてみた</a></p>
+<p><a href="Phase difference-06.html">６．ノイズにどのくらい強い？</a></p>
+<p>です．</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span class="style7"><a href="index.html"><img src="TOP.png" alt="t" width="57" height="34" /></a></span><a href="Phase difference-02.html"><img src="R-arrow.png" alt="r" width="57" height="34" /></a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

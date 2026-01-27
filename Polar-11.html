@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Polar-11</title>
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+</script>
+
+<link href="160324.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+</head>
+
+<body>
+<p class="X-Large-Bold-RED">偏光板を通すと光量はどのくらい減少するのか？</p>
+<p class="Large-Bold-Red">縦偏光</p>
+<p>無偏光の光（<span class="Blue-Bold">青矢印</span>）を縦偏光板に通すとします．</p>
+<p><img src="Polar-01.png" width="385" height="386" /></p>
+<p>薄い線が偏光板の向きです．その場合，<span class="Red-Bold">赤い矢印</span>の光のみが偏光板を通過します．その大きさは，</p>
+<p>\(\Large cos \theta　\)</p>
+<p>となります．強度はその二乗となるので，（I<sub>0</sub>：元の光の強度，I：偏光板を通過した光）とすると，</p>
+<p>\(\Large I = I_0 \ cos \theta　\)</p>
+<p>から，全周に渡って積分すればよいのです．この場合には1/4のみの計算でいいので，規格化を考慮して，</p>
+<p>\(\Large    \frac{I}{I_0} = \frac{\displaystyle \int_{ - 0 }^{ \frac{ \pi}{2} } cos^2 \theta \ d \theta}<br />
+{\displaystyle \int_{ - 0 }^{ \frac{ \pi}{2} } d \theta} \)</p>
+<p>を計算すればよいことになります．ここで，</p>
+<p> \(\Large cos^2 \theta = \frac{1 + cos 2 \theta}{2} 　\)　</p>
+<p>なので，</p>
+<p>\(\Large    \frac{I}{I_0} = \frac{\displaystyle \int_{ - 0 }^{ \frac{ \pi}{2} } \frac{1 +cos \ 2 \theta}{2} \ d \theta}<br />
+{\displaystyle \int_{ - 0 }^{ \frac{ \pi}{2} } d \theta}　\)</p>
+<p>\(\Large \qquad = \frac{ \frac{1}{2} \left[ \theta + \frac{1}{2} sin \ 2 \theta \right]_{ - 0 }^{ \frac{ \pi}{2} }}{\left[ \theta \right]_{ - 0 }^{ \frac{ \pi}{2}}} 　\)</p>
+<p>\(\Large \qquad = \frac{ \frac{ \pi}{4}}{\frac{ \pi}{2}}　= \frac{1}{2} \)</p>
+<p>となり，光量は<span class="X-Large-Bold-RED">1/2</span>となることがわかります．</p>
+<p>&nbsp;</p>
+<p><span class="style7"><a href="Lecture-top.html"><img src="L-arrow.png" alt="l" width="57" height="34" border="0" /></a> <a href="kenkyu.html"><img src="TOP.png" alt="t" width="57" height="34" /></a></span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

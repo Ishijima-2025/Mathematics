@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Phase difference</title>
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+</script>
+
+<link href="160324.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+</head>
+
+<body>
+<p class="X-Large-Bold-RED">２つの正弦波の位相差を求める方法-04</p>
+<p class="Large-Bold-Red">ベクトル積</p>
+<p>2つの正弦波，を以下のように設定しました（振幅で割って，１としています．）</p>
+<p>\(\Large  x =  sin \ ( \omega t) \)　</p>
+<p>\(\Large  y =  sin \ ( \omega t + \phi ) \)　</p>
+<p>時間ごとに変化しているので，<span class="Large-Bold-Red">t = Δt ✕ n</span>，とすると，</p>
+<p>\(\Large  x_n =  sin \ ( \omega \cdot n \Delta t) \)　</p>
+<p>\(\Large  y_n =  sin \ ( \omega \cdot n \Delta  t + \phi ) \)　</p>
+<p>となります．n+1，ステップでは，</p>
+<p>\(\Large  x_{n+1} =  sin \ \{ \omega \cdot (n+1) \Delta t \} = sin \{ \omega \cdot n \Delta t + \omega \cdot  \Delta t\}\)　</p>
+<p>\(\Large  y_{n+1} =  sin \ \{ \omega \cdot (n+1) \Delta  t + \phi \} = sin \{ \omega \cdot n \Delta t + \omega \cdot  \Delta t  + \phi \}\)　</p>
+<p>となります．</p>
+<p>\(\Large a = \omega \cdot n \Delta t \)</p>
+<p>\(\Large  b = \omega  \cdot n \Delta t + \phi  \)</p>
+<p>\(\Large  c = \omega \cdot  \Delta t \)</p>
+<p>とすると，</p>
+<p>\(\Large x_n = sin \ a  \)</p>
+<p>\(\Large  y_n = sin \ b  \)</p>
+<p>\(\Large  x_{n+1} =  sin (a+c) = sin \ a \cdot cos \ c + cos \ a \cdot sin \ c  \)</p>
+<p>\(\Large  y_{n+1} =  sin (b+c) = sin \ b \cdot cos \ c + cos \ c \cdot sin \ b  \)</p>
+<p> これらを二つベクトルと考え，ベクトル積，を考えると，</p>
+<p> \(\Large   x_{n} \cdot y_{n+1} - x_{n+1} \cdot y_n = sin \ a \cdot (sin \ b \cdot cos \ c + cos \ c \cdot sin \ b) - (sin \ a \cdot cos \ c + cos \ a \cdot sin \ c) \cdot sin \ b  \)</p>
+<p>\(\Large  = sin \ a \cdot sin \ b \cdot cos \ c + sin \ a \cdot cos \ b \cdot sin \ c - sin \ a \cdot sin \ b \cdot cos \ c - cos \ a \cdot sin \ b \cdot sin \ c  \)</p>
+<p>\(\Large  =  sin \ a \cdot cos \ b \cdot sin \ c - cos \ a \cdot sin \ b \cdot sin \ c  \)</p>
+<p>\(\Large  =  ( sin \ a \cdot cos \ b  - cos \ a \cdot sin \ b) \cdot sin \ c  \)</p>
+<p>\(\Large  =   sin \ ( a  - b ) \cdot sin \ c  \)</p>
+<p> となります． a, b, c, を戻すと，</p>
+<p>\(\Large  S = x_{n} \cdot y_{n+1} - x_{n+1} \cdot y_n = sin \ ( a  - b ) \cdot sin \ c = sin \ \{\omega \cdot n \Delta t - (\omega  \cdot n \Delta t + \phi)\}\cdot sin \ (\omega \cdot  \Delta t)  \)</p>
+<p>\(\Large  =  sin \ (- \phi) \cdot sin \ (\omega \cdot  \Delta t)   \)</p>
+<p> となります．このことは， 　Sは，ステップによらずに，一定（周波数，位相差，Δｔに依存） ということになります．</p>
+<p>このことが何を意味するかというと，</p>
+<p>　一定角速度で正弦波運動している２つの波形のXYプロットにおいて，どの軌道位置でも一定間隔の場合のなす平行四辺形（もしくは三角形）の面積は等しい</p>
+<p>となります．図示すると，</p>
+<p><img src="Phase difference-04.png" width="618" height="560" alt=""/></p>
+<p>となり，<span class="Large-Bold-Red">赤，青，緑で描いた平行四辺形（もしくは三角形）の面積は等しく</span>なります．</p>
+<p><span class="Large-Bold-Red">位相Φ，角速度ω，Δｔ，のみに依存</span>します．</p>
+<p>まるで，<span class="Blue-Bold">ケプラーの第二法則</span>，のようですが，あれは，<span class="Blue-Bold">中心力が働いている場合で，焦点との掃引面積</span>なので，ちょっと違うかもしれません．</p>
+<p>Φ=π/2，の場合には円運動になるので，わかりやすいですね．</p>
+<p>&nbsp;</p>
+<p>式をもう一度見直すと，</p>
+<p>\(\Large  S  = x_{n} \cdot y_{n+1} - x_{n+1} \cdot y_n =  sin \ (- \phi) \cdot sin \ (\omega \cdot  \Delta t)   \)</p>
+<p>となるので，</p>
+<p>\(\Large \phi = - sin^{-1} \left[ \frac{S}{ sin \ (\omega \cdot  \Delta t)}   \right] = - sin^{-1} \left[ \frac{x_{n} \cdot y_{n+1} - x_{n+1} \cdot y_n}{ sin \ (\omega \cdot  \Delta t)}   \right]\)</p>
+<p>となり，<span class="Large-Bold-Red">位相情報を，S（たすき掛け），ω，Δｔ，から推定できます</span>．（あらかじめ振幅を，１，としておく必要があります）</p>
+<p><a href="https://blog.goo.ne.jp/je-suis-sumichan/e/0e562abe1dacdfd5ad65763d4658c685" target="_blank">元となるサイト</a>，では，<br />
+  <span class="Blue-Bold">　１．たすき掛け<br />
+  　２．振幅で割る<br />
+  　３．相対角周波数で割る<br />
+  　４．arcsinを計算する</span><br />
+ですが，上記の式はそれをまとめたもの（振幅で割ることは事前に行っている）となります．</p>
+<p>次ページに，実際に<span class="Blue-Bold">エクセル</span>で計算した結果をお示しします．</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span class="style7"><a href="Phase difference-03.html"><img src="L-arrow.png" alt="l" width="57" height="34" border="0" /></a> <a href="index.html"><img src="TOP.png" alt="t" width="57" height="34" /></a></span><a href="Phase difference-05.html"><img src="R-arrow.png" alt="r" width="57" height="34" /></a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

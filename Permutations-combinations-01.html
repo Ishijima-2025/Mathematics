@@ -1,0 +1,101 @@
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ['\\(','\\)'] ],
+    processEscapes: true
+  },
+  TeX: {
+    extensions: ["mhchem.js"]
+  },
+  CommonHTML: {
+    matchFontHeight: false
+  }
+});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+
+
+	
+
+
+
+<link href="160324.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+<title>Permutations, combinations</title>
+</head>
+
+<body>
+<p class="X-Large-Bold-RED">順列，組み合わせ</p>
+<p>&nbsp;</p>
+<p>高校で習ったかと思いますが，順列，組み合わせについて説明します．</p>
+<p>&nbsp;</p>
+<p class="Large-Bold-Red">・順列</p>
+<p><span class="Blue-Bold">N個</span>の中から，<span class="Blue-Bold">ｎ個</span>を選ぶ場合の数で，<span class="Large-Blue">並べ方を考慮する場合</span>です．</p>
+<p>例えば，</p>
+<p>　①，②，③，④，⑤</p>
+<p>という5つの玉があった場合に，3つ選ぶ場合の数を考えます．</p>
+<p class="Blue-Bold">第一回目：</p>
+<p>　5つのうちからランダムに選ぶので，その場合の数は５</p>
+<p>例えば，</p>
+<p>　③</p>
+<p class="Blue-Bold">第二回目：</p>
+<p>　③はもう選んだので，残りの①，②，④，⑤の4つからランダムに選ぶので，その場合の数は４</p>
+<p>例えば，</p>
+<p>　④</p>
+<p class="Blue-Bold">第三回目：</p>
+<p>　③，④は選んだので，残りの①，②，⑤の3つからランダムに選ぶので，その場合の数は3</p>
+<p>例えば，</p>
+<p>　①</p>
+<p>つまり，①，③，④を選び，</p>
+<p>\( \Large     _5 P_3 = 5 \times 4 \times 3 = 60 \)</p>
+<p>書き直すと，</p>
+<p>\( \Large     _5 P_3 = \frac{5!}{2!} \)</p>
+<p>N個の中から，ｎ個を選ぶ場合の数は，</p>
+<p>\( \Large           \displaystyle _N P_n = \frac{N!}{(N-n)!} \)</p>
+<p>となります．</p>
+<p>&nbsp;</p>
+<p class="Large-Bold-Red">・組み合わせ</p>
+<p><span class="Blue-Bold">N個</span>の中から，<span class="Blue-Bold">ｎ個</span>を選ぶ場合の数で，<span class="Large-Blue">並べ方を考慮しない場合</span>です．</p>
+<p>上の場合には，①，③，④を選びましたが，</p>
+<p>①，③，④</p>
+<p>①，④，③</p>
+<p>③，④，①</p>
+<p>③，①，④</p>
+<p>④，③，①</p>
+<p>④，①，③</p>
+<p>つまり，n!，通りあるので，</p>
+<p>\( \Large     _5 C_3 =\frac{_5 P_3}{3!} = \frac{5!}{2! 3!} \)</p>
+<p>つまり，</p>
+<p>N個の中から，ｎ個を選ぶ場合の数は，</p>
+<p>\( \Large           \displaystyle _N C_n = \frac{N!}{(N-n)!n!} \)</p>
+<p>となります．</p>
+<p>&nbsp;</p>
+<p class="Large-Bold-Red">・組み合わせ，の公式</p>
+<p class="Red-Bold">・\( \Large           \displaystyle _N C_n = _N C_{N-n} \)</p>
+<p>\( \Large           \displaystyle  _N C_{N-n} = \frac{N!}{(N-n)! \{ N-(N-n)! \}}\)</p>
+<p>\( \Large           \displaystyle   = \frac{N!}{(N-n)! n! }\)</p>
+<p>\( \Large           \displaystyle = _N C_n  \)</p>
+<p>&nbsp;</p>
+<p> </p>
+<p></p>
+<p><span class="Red-Bold">・\( \Large           \displaystyle _N C_n = _{N-1} C_n +  _{N-1} C_{n-1}\)</span></p>
+<p>\( \Large           \displaystyle  _{N-1} C_n +  _{N-1} C_{n-1} \)</p>
+<p>\( \Large           \displaystyle   = \frac{(N-1)!}{(N-1-n)! n! } + \frac{(N-1)!}{( \{N-1 \} -\{ n-1 \})! (n-1)! }\)</p>
+<p>\( \Large           \displaystyle   = \frac{(N-1)!}{(N-n-1)! n! } + \frac{(N-1)!}{( N- n)! (n-1)! }\)</p>
+<p>\( \Large           \displaystyle   = \frac{(N-1)!}{(N-n-1)! \ n (n-1)! } + \frac{(N-1)!}{(N-n) (N-n-1)! (n-1)! }\)</p>
+<p>\( \Large           \displaystyle   = \frac{(N-1)!}{(N-n-1)!  (n-1)! }  \left[ \frac{1}{n} + \frac{1}{N-n} \right]\)</p>
+<p>\( \Large           \displaystyle   = \frac{(N-1)!}{(N-n-1)!  (n-1)! }   \frac{N}{n ( N-n)} \)</p>
+<p>\( \Large           \displaystyle   = \frac{N!}{(N-n)!  n! }    \)</p>
+<p>\( \Large           \displaystyle   = _N C_n    \)</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span class="style7"><a href="index.html"><img src="TOP.png" alt="t" width="57" height="34" /></a></span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

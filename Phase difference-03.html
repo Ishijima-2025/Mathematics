@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Phase difference</title>
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+</script>
+
+<link href="160324.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+</head>
+
+<body>
+<p class="X-Large-Bold-RED">２つの正弦波の位相差を求める方法-03</p>
+<p class="Large-Bold-Red">ベクトル積と面積との関係</p>
+<p>XYプロットにおいて，それぞれの座標と原点を結ぶベクトルを考えます．</p>
+<p>このベクトルが刻一刻と楕円運動していくわけです．</p>
+<p>そこで，２つのベクトルを考えていきます．それぞれ，</p>
+<p>\(\Large  a(x_1, y_1), \ b(x_2,y_2) \)　</p>
+<p>とします．</p>
+<p><img src="Phase difference-02.png" width="559" height="468" alt=""/></p>
+<p>その間のなす角を，<span class="Red-Bold">θ</span>，とします．</p>
+<p>それぞれのベクトルの大きさは，</p>
+<p>\(\Large  a^2 = x_1^2 + y_1^2, \ b^2 = x_2^2 + y_2^2 \)　</p>
+<p>です．この平行四辺形の面積，S，は，</p>
+<p>\(\Large S = a \cdot b \cdot cos \ \theta  \)　</p>
+<p>\(\Large  S^2 = a^2 \cdot b^2 \cdot cos^2 \ \theta  \)　</p>
+<p>\(\Large   = a^2 \cdot b^2 \cdot ( 1 - cos^2 \theta)  \)　</p>
+<p>\(\Large  = a^2 \cdot b^2 - a^2 \cdot b^2 \cdot cos^2 \theta \)　</p>
+<p>となります．右辺第二項は<span class="Red-Bold">内積</span>となるので</p>
+<p>\(\Large a \cdot b \cdot cos \theta = x_1 \cdot x_2 + y_1 \cdot y_2\)　</p>
+<p>&nbsp;</p>
+<p>\(\Large S^2 = (x_1^2 + y_1^2)(x_2^2 + y_2^2) - (x_1 \cdot x_2 + y_1 \cdot y_2)^2   \)　</p>
+<p> \(\Large = x_1^2 \cdot x_2^2 + x_1^2 \cdot y_2^2 + y_1^2 \cdot x_2^2 + y_1^2 \cdot y_2^2 - (x_1^2 \cdot x_2^2 +2 x_1 \cdot x_2 \cdot y_1 \cdot y_2 + y_1^2 \cdot y_2^2 )  \)　</p>
+<p> \(\Large = x_1^2 \cdot y_2^2 - 2 x_1 \cdot x_2 \cdot y_1 \cdot y_2 + y_1^2 \cdot x_2^2   \)　</p>
+<p> \(\Large = (x_1 \cdot y_2 - y_1 \cdot x_2)^2  \)　</p>
+<p>\(\Large S = x_1 \cdot y_2 - x_2 \cdot y_1  \)　</p>
+<p>となります．</p>
+<p>&nbsp;</p>
+<p>別の方法として，面積から考えると，</p>
+<p><img src="Phase difference-03.png" width="551" height="429" alt=""/></p>
+<p>&nbsp;</p>
+<p>\(\Large S_{sqare} = (x_1 + x_2) \cdot (y_1 + y_2) \)　</p>
+<p>\(\Large  2 \ S_A = x_1 \cdot y_1  \)　</p>
+<p>\(\Large  2 \ S_B = x_2 \cdot y_2  \)　</p>
+<p>\(\Large  2 C = 2 \ x_2 \cdot y_1   \)　</p>
+<p>\(\Large  S_{parallelogram} = (x_1 + x_2) \cdot (y_1 + y_2) - [  x_1 \cdot y_1 + x_2 \cdot y_2 + x_2 \cdot y_1  ] \)　</p>
+<p>\(\Large  = x_1 \cdot y_1 + x_1 \cdot y_2 + x_2 \cdot y_1 + x_2 \cdot y_2- [  x_1 \cdot y_1 + x_2 \cdot y_2 + x_2 \cdot y_1  ] \)　</p>
+<p>\(\Large  =  x_1 \cdot y_2 - x_2 \cdot y_1 \)　</p>
+<p>と ２つの導出結果が一致しました．</p>
+<p>次ページから，この関係を用いて，<span class="Large-Bold-Blue">ベクトル積と位相</span>，との関係を考えていきます．</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span class="style7"><a href="Phase difference-02.html"><img src="L-arrow.png" alt="l" width="57" height="34" border="0" /></a> <a href="index.html"><img src="TOP.png" alt="t" width="57" height="34" /></a></span><a href="Phase difference-04.html"><img src="R-arrow.png" alt="r" width="57" height="34" /></a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>
