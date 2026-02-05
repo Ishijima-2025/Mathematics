@@ -1,0 +1,96 @@
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ['\\(','\\)'] ],
+    processEscapes: true
+  },
+  TeX: {
+    extensions: ["mhchem.js"]
+  },
+  CommonHTML: {
+    matchFontHeight: false
+  }
+});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Dragon</title>
+<link href="090413.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+</head>
+
+<body>
+<p class="X-Large-RED"><strong>ドラゴン桜，図形問題-01 </strong></p>
+<p>&nbsp;</p>
+<p>ドラゴン桜，もう20年前近くのコミックですが，今見ても面白いですね．</p>
+<p>その中で（巻数は忘れちゃいましたが．．）図形問題があり，気になったので解いてみました．</p>
+<p>ネットを検索しても関連記事は見つかりませんでした．．．</p>
+<p>&nbsp;</p>
+<p><span class="Large-Red">・問題</span></p>
+<p>問題は，</p>
+<p class="Blue">　円に内接する四角形ABCDで，</p>
+<p class="Blue">\( \Large       AB = AD = \sqrt{3},  \ BD = 2 \sqrt{2}, AC = \sqrt{6}, \ cos \angle ABC = \frac{\sqrt{3}}{3} \)</p>
+<p class="Blue">である．このとき，<strong>CD = ???</strong></p>
+<p>という問題で，教師は，</p>
+<p class="Blue">　図を描いても図が正確でないと線の長さがわからない<br>
+  　焦らずに丁寧に図を描こう<br>
+  　見ただけで答えが推測できる<br>
+　CDは整数で2よりも明らかに小さいから１だ  </p>
+<p>と話しています．しかし．．．．</p>
+<p>　<strong><span class="Red">見ただけでは答えが推測できない．．．．</span></strong></p>
+<p>ので，まずは正確な図を描いてみました．</p>
+<p>&nbsp;</p>
+<p class="Large-Red">・作図</p>
+<p class="Large-Red"><img src="Dragon-01.png" width="600" height="817" alt=""/></p>
+<p>まずはBDの位置を確定します．Aを中心に半径ルート3の円との交点がB，Dとなります．</p>
+<p>次に三角形ABDを考えます．これは明らかに二等辺三角形なので，円の中心から伸ばした線による直角三角形の高さAEは，<span class="Large-Red">１</span>，となります．</p>
+<p>つぎに，三角形BEO，DEO，について考えます．高さは，r－1，なので，</p>
+<p><img src="Dragon-02.png" width="600" height="602" alt=""/></p>
+<p>&nbsp;</p>
+<p>\( \Large      r^2 = (r-1)^2+( \sqrt{2})^2 \)</p>
+<p>\( \Large      r^2 = r^2-2r+1+2 \)</p>
+<p>\( \Large      2r = 3 \)</p>
+<p>\( \Large      r = 1.5 \)</p>
+<p>となります．</p>
+<p><img src="Dragon-03.png" width="600" height="602" alt=""/></p>
+<p>つぎに，Aを中心に半径ルート6の円との交点がCとなります．</p>
+<p><img src="Dragon-04.png" width="600" height="668" alt=""/></p>
+<p>ドラゴン桜の図と比べるとだいぶ異なりますね．．．．図を正確に描く，と言っているのに．．．</p>
+<p>四角形ABCDの形が妙にきれいなのが気になりますが．．．</p>
+<p>&nbsp;</p>
+<p class="Large-Red">・余弦定理，円周角の定理</p>
+<p><img src="Dragon-05.png" width="600" height="602" alt=""/></p>
+<p>余弦定理より，</p>
+<p>\( \Large      \sqrt{3} = (\sqrt{3})^2 + (2 \sqrt{2})^2 -2 \cdot \sqrt{3} \cdot 2 \sqrt{2} \cdot cos \angle ABD  \)</p>
+<p>\( \Large      \sqrt{3} = (\sqrt{6})^2 + CD^2 -2 \cdot \sqrt{6} \cdot CD \cdot cos \angle ACD  \)</p>
+<p>したがって，</p>
+<p>\( \Large       cos \angle ABD  = \frac{2}{ \sqrt{6}} \)</p>
+<p>\( \Large       cos \angle ACD  = -\frac{3+CD^2}{ 2 \sqrt{6} CD} \)</p>
+<p>円周角の定理より，</p>
+<p>\( \Large      \angle ABD = \angle ACD \)</p>
+<p>したがって，</p>
+<p>\( \Large       \frac{2}{ \sqrt{6}}  = \frac{3+CD^2}{ 2 \sqrt{6} CD} \)</p>
+<p>\( \Large       CD^2-4 CD+3 = 0 \)</p>
+<p>\( \Large       (CD-3) (CD-1) = 0 \)</p>
+<p>\( \Large       CD = 3, 1 \)</p>
+<p>となります．</p>
+<p>\( \Large        cos \angle ABC = \frac{\sqrt{3}}{3} \simeq 0.577 &lt; \frac{ \pi}{4} \)</p>
+<p>なので，\( \Large       \ \angle ABC  \)は，鋭角となります．したがって，AB &gt; CD，となるので，</p>
+<p class="Large-Red">　CD = 1</p>
+<p>という答えとなります．</p>
+<p>次ページにいろいろと気になる点を話していきます．</p>
+<p>&nbsp;</p>
+<p><span class="style7"><a href="index.html"> <img src="TOP.png" alt="t" width="57" height="34" /></a></span><a href="Dragon-Sakura-02.html"><img src="R-arrow.png" alt="r" width="57" height="34" /></a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>
